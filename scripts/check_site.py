@@ -56,7 +56,9 @@ class Page(HTMLParser):
                 self.links.append(a["src"])
             if a.get("srcset"):
                 self.links += [p.strip().split(" ")[0] for p in a["srcset"].split(",")]
-        if tag == "title":
+        if tag == "body":
+            self._in_body = True
+        if tag == "title" and not getattr(self, "_in_body", False):   # ignore <title> inside inline SVGs
             self._in_title, self._buf = True, []
         if tag == "meta" and a.get("name") == "description":
             self.desc = a.get("content", "")
