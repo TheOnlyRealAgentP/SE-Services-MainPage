@@ -705,19 +705,6 @@ html:not(.js) .sub-toggle { display: none; }
   .steps h3 { padding-top: .375rem; margin-bottom: 4px; font-size: 1.1875rem; }
   .steps p { font-size: .9375rem; }
 
-  /* Reviews: swipe sideways instead of three tall cards in a row */
-  .testimonials {
-    display: grid; grid-auto-flow: column; grid-auto-columns: 86%; gap: 12px;
-    overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
-    margin-inline: calc(-1 * var(--gutter)); padding: 0 var(--gutter) var(--s-1);
-    scroll-padding-inline: var(--gutter); scrollbar-width: none;
-  }
-  .testimonials::-webkit-scrollbar { display: none; }
-  .testimonials .testimonial { scroll-snap-align: start; }
-  .testimonial { padding: var(--s-5) var(--s-2) var(--s-2); }
-  .testimonial blockquote p { font-size: 1rem; }
-  .swipe-hint { display: block; }
-
   /* FAQ */
   .faq summary { font-size: 1rem; padding-block: 14px; }
   .faq-grid { gap: var(--s-3); }
@@ -749,7 +736,6 @@ html:not(.js) .sub-toggle { display: none; }
   .card-more { display: none; }
   .card { padding: var(--s-2); }
 }
-.swipe-hint { display: none; margin: var(--s-1) 0 0; font-size: .8125rem; color: var(--muted); }
 
 /* White logo mark in the empty space left of the home header text on wide
    screens. It sits just outside the content column and slides off-screen
@@ -763,3 +749,50 @@ html:not(.js) .sub-toggle { display: none; }
     opacity: .9;
   }
 }
+
+/* ---------- Review carousel ---------- */
+.reviews { max-width: 56rem; margin-inline: auto; }
+.reviews-track {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  overscroll-behavior-x: contain; scrollbar-width: none; border-radius: var(--radius);
+}
+.reviews-track::-webkit-scrollbar { display: none; }
+.reviews-track:focus-visible { outline-offset: 4px; }
+.review-slide {
+  flex: 0 0 100%; scroll-snap-align: start; margin: 0; position: relative;
+  display: flex; flex-direction: column; justify-content: center;
+  background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--accent);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: var(--s-5) var(--s-3) var(--s-3);
+}
+@media (min-width: 768px) { .review-slide { padding: var(--s-6) var(--s-6) var(--s-5); } }
+.review-mark {
+  position: absolute; top: var(--s-2); left: var(--s-3); font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.5rem; line-height: 1; color: var(--accent); opacity: .9;
+}
+@media (min-width: 768px) { .review-mark { left: var(--s-6); top: var(--s-3); font-size: 5.5rem; } }
+.review-stars { margin: 0 0 var(--s-1); color: #C8961E; letter-spacing: 2px; font-size: 1.125rem; }
+.review-slide blockquote { margin: 0 0 var(--s-3); }
+.review-slide blockquote p { margin: 0; color: var(--ink); font-size: 1.0625rem; line-height: 1.6; }
+@media (min-width: 768px) { .review-slide blockquote p { font-size: 1.3125rem; line-height: 1.55; } }
+.review-slide figcaption { color: var(--muted); font-size: var(--fs-sm); }
+.review-name { font-family: var(--font-head); font-size: 1.125rem; font-weight: 700; color: var(--ink); }
+.review-source {
+  display: inline-block; margin-left: var(--s-1); padding: 2px 10px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: .8125rem;
+}
+.reviews-controls { display: flex; align-items: center; justify-content: center; gap: var(--s-1); margin-top: var(--s-3); }
+html:not(.js) .reviews-controls { display: none; }
+.rv-btn {
+  display: inline-grid; place-items: center; min-width: 44px; height: 44px; padding: 0 12px;
+  background: var(--white); color: var(--ink); border: 1px solid var(--line); border-radius: 999px;
+  font-family: var(--font-head); font-weight: 700; cursor: pointer;
+}
+.rv-btn:hover { border-color: var(--accent); color: var(--accent); }
+.rv-pause { margin-left: var(--s-1); min-width: 72px; }
+.rv-dots { display: flex; gap: 2px; }
+.rv-dot { width: 28px; height: 44px; padding: 0; background: none; border: 0; cursor: pointer; display: grid; place-items: center; }
+.rv-dot::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #C9D3DD; transition: background .2s, transform .2s; }
+.rv-dot[aria-current="true"]::before { background: var(--accent); transform: scale(1.25); }
+.reviews-cta { text-align: center; margin-top: var(--s-2); }
+.section-alt .review-slide { background: var(--white); }

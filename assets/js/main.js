@@ -51,6 +51,70 @@
     else if (desktop.addListener) desktop.addListener(onChange);
   }
 
+  /* ---------- Review carousel ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-reviews]'), function (root) {
+    var track = root.querySelector('.reviews-track');
+    var slides = root.querySelectorAll('.review-slide');
+    var dots = root.querySelectorAll('.rv-dot');
+    var pauseBtn = root.querySelector('.rv-pause');
+    if (!track || slides.length < 2) return;
+
+    var DELAY = 7000;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var userPaused = reduce;          // people who prefer less motion start paused
+    var hovering = false, focused = false, visible = true, touchHold = 0;
+    var timer = null, index = 0;
+
+    function current() { return Math.round(track.scrollLeft / track.clientWidth); }
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      track.scrollTo({ left: index * track.clientWidth, behavior: reduce ? 'auto' : 'smooth' });
+      mark(index);
+    }
+    function mark(i) {
+      Array.prototype.forEach.call(dots, function (d, n) {
+        if (n === i) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
+      });
+    }
+    function running() { return !userPaused && !hovering && !focused && visible && !document.hidden && Date.now() > touchHold; }
+    function tick() { if (running()) goTo(current() + 1); }
+    function start() { stop(); timer = setInterval(tick, DELAY); }
+    function stop() { if (timer) clearInterval(timer); timer = null; }
+    function syncPause() {
+      if (!pauseBtn) return;
+      pauseBtn.setAttribute('aria-pressed', userPaused ? 'true' : 'false');
+      pauseBtn.querySelector('.rv-pause-label').textContent = userPaused ? 'Play' : 'Pause';
+      track.setAttribute('aria-live', userPaused ? 'polite' : 'off');
+      root.classList.toggle('is-paused', userPaused);
+    }
+
+    root.querySelector('.rv-prev').addEventListener('click', function () { goTo(current() - 1); start(); });
+    root.querySelector('.rv-next').addEventListener('click', function () { goTo(current() + 1); start(); });
+    Array.prototype.forEach.call(dots, function (d, n) { d.addEventListener('click', function () { goTo(n); start(); }); });
+    if (pauseBtn) pauseBtn.addEventListener('click', function () { userPaused = !userPaused; syncPause(); start(); });
+
+    root.addEventListener('mouseenter', function () { hovering = true; });
+    root.addEventListener('mouseleave', function () { hovering = false; });
+    root.addEventListener('focusin', function () { focused = true; });
+    root.addEventListener('focusout', function (e) { if (!root.contains(e.relatedTarget)) focused = false; });
+    track.addEventListener('touchstart', function () { touchHold = Date.now() + 12000; }, { passive: true });
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current() + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current() - 1); }
+    });
+    var settle;
+    track.addEventListener('scroll', function () {
+      clearTimeout(settle);
+      settle = setTimeout(function () { index = current(); mark(index); }, 80);
+    }, { passive: true });
+    window.addEventListener('resize', function () { track.scrollLeft = index * track.clientWidth; });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }, { threshold: 0.3 }).observe(root);
+    }
+    syncPause();
+    start();
+  });
+
   /* ---------- Contact form ---------- */
   var form = document.querySelector('[data-quote-form]');
   if (!form) return;

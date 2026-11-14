@@ -106,7 +106,25 @@ spots still need a real photo:
 
 See the README for how to add photos.
 
-## 5. Optional
+## 5. More reviews for the review carousel
+
+The home and About pages rotate through every review in
+`_data/testimonials.yml` (the format is explained at the top of that file).
+Only three verified reviews are there today. As of November 2026, Google
+shows about 15 reviews for "Stewart Engineering" at 16531 Shady Ln. Google
+doesn't allow automated copying, so these have to be copied by hand:
+
+- [ ] **Google:** open the Business Profile → Reviews. Copy the good ones word
+      for word, with the reviewer's name as shown, the star rating and
+      "Google" as the source. While you're there, reply to every review,
+      especially the critical ones; future customers read the replies.
+- [ ] **Facebook** (facebook.com/StewartAerobic → Reviews/Recommendations).
+- [ ] **Yelp** and **HomeAdvisor/Angi:** any reviews beyond the two already used.
+- [ ] Add the Google review link to `_data/business.yml`
+      (`google_review_link`). A "Leave us a review on Google" link then
+      appears under the carousel.
+
+## 6. Optional
 
 - [ ] **Logo source file.** The logo was rebuilt as a vector from the
       low-resolution image on se.services: the gear and compass redrawn,

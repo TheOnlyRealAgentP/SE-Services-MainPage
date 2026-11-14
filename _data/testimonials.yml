@@ -1,11 +1,24 @@
-# Real customer reviews, copied word for word from aerobicservice.com.
-# Only obvious typos were fixed ("Mr, Stewart" -> "Mr. Stewart", "Its" -> "It's").
+# Real customer reviews, shown in the auto-scrolling review carousel on the
+# home and About pages, in this order. Copy them word for word from Google,
+# Yelp, Facebook, HomeAdvisor etc. Fix only obvious typos.
 # Never add a review here that a real customer did not write.
+#
+# To add one, copy this block and fill it in:
+#
+# - id: first-last            # unique, lowercase, no spaces
+#   name: First L.            # as shown on the review site
+#   town: Crosby, TX          # or "" if not shown
+#   source: Google            # Google, Yelp, Facebook, HomeAdvisor, BBB...
+#   stars: 5                  # 1-5 as shown on the site; delete the line if unknown
+#   side: septic              # septic or engineering
+#   quote: >-
+#     The review text, word for word.
 
 - id: michael-c
   name: Michael C.
   town: Spring, TX
   source: Yelp
+  stars: 5
   side: engineering
   quote: >-
     Stewart Engineering did a fantastic job for me on a large, complex
@@ -19,6 +32,7 @@
   name: Kathy B.
   town: Crosby, TX
   source: HomeAdvisor
+  stars: 5
   side: septic
   quote: >-
     Highly recommend. Liked that they can maintain, repair & pump your septic

@@ -85,11 +85,6 @@ lede: A family-owned firm in Channelview providing septic and aerobic services f
     <div class="section-head">
       <h2 id="reviews-heading">What our customers say</h2>
     </div>
-    <div class="testimonials" role="region" aria-label="Customer reviews" tabindex="0">
-      {%- for t in site.data.testimonials %}
-      {% include testimonial.html id=t.id %}
-      {%- endfor %}
-    </div>
-    <p class="swipe-hint" aria-hidden="true">Swipe to read more reviews →</p>
+    {% include reviews.html %}
   </div>
 </section>

@@ -1,0 +1,41 @@
+{%- comment -%}
+  Auto-advancing review carousel. Shows every review in _data/testimonials.yml,
+  one at a time, sliding to the next every few seconds. Visitors can swipe,
+  use the arrows or dots, or pause it. It stops while hovered, focused or
+  touched, while off-screen, and for people who prefer reduced motion.
+  Without JavaScript it's a plain swipeable row.
+{%- endcomment -%}
+{%- assign reviews = site.data.testimonials -%}
+{%- assign b = site.data.business -%}
+<div class="reviews" data-reviews>
+  <div class="reviews-track" role="region" aria-roledescription="carousel" aria-label="Customer reviews" tabindex="0" aria-live="off">
+    {%- for t in reviews %}
+    <figure class="review-slide" role="group" aria-roledescription="slide" aria-label="Review {{ forloop.index }} of {{ forloop.length }}">
+      <span class="review-mark" aria-hidden="true">&ldquo;</span>
+      {%- if t.stars %}
+      <p class="review-stars" aria-label="{{ t.stars }} out of 5 stars"><span aria-hidden="true">{% for i in (1..t.stars) %}&#9733;{% endfor %}</span></p>
+      {%- endif %}
+      <blockquote><p>{{ t.quote }}</p></blockquote>
+      <figcaption>
+        <span class="review-name">{{ t.name }}</span>{% if t.town != "" %}<span class="review-town">, {{ t.town }}</span>{% endif %}
+        <span class="review-source">{{ t.source }} review</span>
+      </figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+  {%- if reviews.size > 1 %}
+  <div class="reviews-controls">
+    <button class="rv-btn rv-prev" type="button" aria-label="Previous review"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="rv-dots">
+      {%- for t in reviews %}
+      <button class="rv-dot" type="button" aria-label="Show review {{ forloop.index }}"{% if forloop.first %} aria-current="true"{% endif %}></button>
+      {%- endfor %}
+    </div>
+    <button class="rv-btn rv-next" type="button" aria-label="Next review"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button class="rv-btn rv-pause" type="button" aria-pressed="false"><span class="rv-pause-label">Pause</span></button>
+  </div>
+  {%- endif %}
+  {%- if b.social.google_review_link != "" %}
+  <p class="reviews-cta"><a href="{{ b.social.google_review_link }}" rel="noopener">Leave us a review on Google</a></p>
+  {%- endif %}
+</div>

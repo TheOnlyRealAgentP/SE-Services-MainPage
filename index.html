@@ -94,14 +94,9 @@ side: both
   <div class="container">
     <div class="section-head">
       <h2 id="reviews-heading">What our customers say</h2>
-      <p>Reviews from Yelp, HomeAdvisor and Google, quoted as written.</p>
+      <p>Reviews from Google, Yelp and HomeAdvisor, quoted as written.</p>
     </div>
-    <div class="testimonials" role="region" aria-label="Customer reviews" tabindex="0">
-      {%- for t in site.data.testimonials %}
-      {% include testimonial.html id=t.id %}
-      {%- endfor %}
-    </div>
-    <p class="swipe-hint" aria-hidden="true">Swipe to read more reviews →</p>
+    {% include reviews.html %}
   </div>
 </section>
 
