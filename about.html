@@ -1,0 +1,72 @@
+---
+title: About Us, Channelview, TX
+description: Stewart Engineering Services is a family-owned septic and civil engineering company in Channelview, TX, with 50+ years of engineering experience.
+permalink: /about
+side: both
+eyebrow: About us
+h1: About Stewart Engineering Services
+lede: A family business in Channelview that does two kinds of work, septic systems for homeowners and civil engineering for builders and developers, both backed by 50+ years of engineering experience.
+---
+{%- assign b = site.data.business -%}
+<section class="section" aria-labelledby="story-heading">
+  <div class="container two-col">
+    <div class="prose">
+      <h2 id="story-heading">Our story</h2>
+      <p>{% include todo.html t="founding story: who started the company, when, and how the septic side and the engineering side came together" %}</p>
+      <p>Today we do two kinds of work that have more in common than you'd think. Homeowners call us when a septic or aerobic system needs installing, inspecting or fixing. Builders, developers and business owners call us when land needs to be planned, platted, drained or brought up to fire code. Both come down to the same thing: an engineered plan that works on the ground and gets approved.</p>
+      <h2>One name, one website</h2>
+      <p>You may know us as <strong>AIMS</strong> or <strong>Stewart Aerobic</strong> from aerobicservice.com, or as <strong>Stewart Engineering</strong> from se.services. It's the same family, the same office on {{ b.address.street }} and the same phone number, now under one name: {{ b.name }}.</p>
+    </div>
+    <div>
+      {% include picture.html name="tank-hookup-trench" sizes="(min-width: 768px) 46vw, 100vw" %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="owner-heading">
+  <div class="container two-col">
+    <div>
+      {% include placeholder.html what="the owner (head-and-shoulders, outdoors or at a job site)" %}
+    </div>
+    <div class="prose">
+      <h2 id="owner-heading">{% if b.owner.name != "" %}{{ b.owner.name }}{% else %}Meet the owner{% endif %}</h2>
+      {%- if b.owner.title != "" %}<p class="eyebrow">{{ b.owner.title }}</p>{% endif %}
+      <p>{% include todo.html t="owner name and title (set them in _data/business.yml), plus 2–3 sentences about the owner: background, licenses and what they handle personally" %}</p>
+      <h3>Licenses and registrations</h3>
+      <ul>
+        {%- for l in b.licenses %}
+        <li>{{ l.label }}: {% if l.number != "" %}{{ l.number }}{% else %}{% include todo.html t="add number" %}{% endif %}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="expect-heading">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="expect-heading">What you can expect from us</h2>
+    </div>
+    <ul class="card-grid card-grid-3">
+      <li class="card"><h3>An inspection before a diagnosis</h3><p>We look at the whole system, including the tanks, equipment and disposal area, before we tell you what's wrong.</p></li>
+      <li class="card"><h3>Options and a written estimate</h3><p>We explain what we found, give you options that fit your budget, and put the price in writing before work starts.</p></li>
+      <li class="card"><h3>Quality parts, proven methods</h3><p>We use good parts and installation methods that hold up, so you aren't calling us back for the same problem.</p></li>
+      <li class="card"><h3>Prompt repairs</h3><p>We know a system that's down disrupts the whole household, so we work to get it running again quickly.</p></li>
+      <li class="card"><h3>A clean job site</h3><p>We keep the work area organized and leave your property clean when the job is done.</p></li>
+      <li class="card"><h3>Engineers on staff</h3><p>When a problem needs more than a part swap, the people designing the fix are licensed engineers.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="reviews-heading">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="reviews-heading">What customers say</h2>
+    </div>
+    <div class="testimonials">
+      {%- for t in site.data.testimonials %}
+      {% include testimonial.html id=t.id %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>

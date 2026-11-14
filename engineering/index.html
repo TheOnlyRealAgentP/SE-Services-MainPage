@@ -1,0 +1,49 @@
+---
+title: Civil Engineering, Houston TX
+description: Civil engineering for builders and developers in Houston and Harris County, covering land development, drainage, wastewater, fire protection, platting and fire code.
+permalink: /engineering/
+side: engineering
+eyebrow: Engineering for builders &amp; developers
+h1: Civil Engineering for Builders & Developers in Harris County
+lede: With 50+ years of engineering experience, we help owners, builders and developers get property planned, platted, drained and permitted, and help commercial buildings meet the fire code.
+---
+{%- assign eng = site.data.services | where: "side", "engineering" -%}
+<section class="section" aria-labelledby="eng-services">
+  <div class="container">
+    <h2 id="eng-services">Engineering services</h2>
+    <ul class="card-grid card-grid-3">
+      {%- for s in eng %}
+      <li class="card link-card">
+        <h3><a href="{{ s.url }}">{{ s.title }}</a></h3>
+        <p>{{ s.summary }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="how-heading">
+  <div class="container">
+    <h2 id="how-heading">How a project works with us</h2>
+    <ol class="steps">
+      <li><h3>Consultation</h3><p>Tell us about the property and what you need approved. We'll tell you what it takes.</p></li>
+      <li><h3>Proposal</h3><p>You get a written scope and fee before any design work starts.</p></li>
+      <li><h3>Design</h3><p>Plans and calculations are prepared and sealed by a licensed professional engineer.</p></li>
+      <li><h3>Approval</h3><p>We submit to the county, city, MUD or fire marshal and answer comments until the plans are approved.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="why-eng">
+  <div class="container faq-grid">
+    <div>
+      <h2 id="why-eng">Design, permitting and code work in one office</h2>
+      <p>Most projects need more than one kind of approval. A small commercial site might need a plat, a drainage plan with detention, an on-site wastewater design and a fire marshal review before it can open. We handle all of those under one roof, so the pieces fit together and you have one point of contact.</p>
+      <p>We also build what we design. Our septic installation crews put engineered wastewater systems in the ground, which keeps our designs practical and buildable.</p>
+      <p><a class="text-link" href="/about">More about us {% include icon.html name="arrow" %}</a></p>
+    </div>
+    <aside aria-label="Customer review">
+      {% include testimonial.html id="michael-c" %}
+    </aside>
+  </div>
+</section>

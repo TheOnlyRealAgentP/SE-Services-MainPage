@@ -1,0 +1,46 @@
+---
+title: Our Services, Channelview, TX
+description: Septic and aerobic installation, maintenance and repair for homeowners, plus land development, drainage, platting and fire code engineering for builders.
+permalink: /services
+side: both
+eyebrow: Everything we do
+h1: Septic, Aerobic & Engineering Services
+lede: Two kinds of work from one family business in Channelview. Pick the side that fits your project, or call and we'll point you in the right direction.
+---
+{%- assign septic = site.data.services | where: "side", "septic" -%}
+{%- assign eng = site.data.services | where: "side", "engineering" -%}
+<section class="section" id="septic" aria-labelledby="septic-heading">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">For homeowners</p>
+      <h2 id="septic-heading">Septic &amp; Aerobic Services</h2>
+      <p>Installation, maintenance contracts and repairs for residential and commercial on-site systems. Common questions are answered in our <a href="/faqs">homeowner FAQ</a>.</p>
+    </div>
+    <ul class="card-grid card-grid-3">
+      {%- for s in septic %}
+      <li class="card link-card">
+        <h3><a href="{{ s.url }}">{{ s.title }}</a></h3>
+        <p>{{ s.summary }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt" id="engineering" aria-labelledby="eng-heading">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">For builders &amp; developers</p>
+      <h2 id="eng-heading">Engineering Services</h2>
+      <p>Planning, design and approvals for residential, commercial and industrial property. See the <a href="/engineering/">engineering overview</a> for how projects work.</p>
+    </div>
+    <ul class="card-grid card-grid-3">
+      {%- for s in eng %}
+      <li class="card link-card">
+        <h3><a href="{{ s.url }}">{{ s.title }}</a></h3>
+        <p>{{ s.summary }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

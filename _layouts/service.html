@@ -33,8 +33,8 @@ layout: default
       {% include trust.html %}
     </div>
     <div class="hero-media">
-      {%- if page.image %}
-      {% include picture.html name=page.image eager=true sizes="(min-width: 960px) 460px, (min-width: 640px) 560px, 100vw" %}
+      {%- if page.photo %}
+      {% include picture.html name=page.photo eager=true sizes="(min-width: 960px) 460px, (min-width: 640px) 560px, 100vw" %}
       {%- else %}
       {% include placeholder.html what=page.placeholder %}
       {%- endif %}
@@ -42,10 +42,13 @@ layout: default
   </div>
 </section>
 
-{%- if content != "" %}
+{%- assign body = content | strip -%}
+{%- if body != "" %}
 <section class="section prose-section">
-  <div class="container prose">
+  <div class="container">
+    <div class="prose">
     {{ content }}
+    </div>
   </div>
 </section>
 {%- endif %}
