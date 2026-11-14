@@ -13,7 +13,7 @@
   {%- else %}
   <li><strong>Licensed</strong> installers and engineers in Texas</li>
   {%- endif %}
-  <li><strong>{{ b.towns.size }} communities</strong> served, including <a href="/service-area">{{ b.towns[0].name }}, {{ b.towns[1].name }} &amp; {{ b.towns[2].name }}</a></li>
+  <li><a href="/service-area"><strong>{{ b.towns.size }} communities</strong> served</a></li>
   {%- if b.rating.value != "" and b.rating.source_url != "" %}
   <li><a href="{{ b.rating.source_url }}" rel="noopener"><strong>{{ b.rating.value }} out of 5</strong> from {{ b.rating.count }} reviews</a></li>
   {%- endif %}

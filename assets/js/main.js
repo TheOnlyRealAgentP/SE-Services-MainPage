@@ -9,13 +9,32 @@
   var nav = document.getElementById('site-nav');
   var desktop = window.matchMedia('(min-width: 1200px)');
 
+  var header = document.querySelector('.site-header');
+
   function setOpen(open) {
     if (!toggle || !nav) return;
+    if (open) {
+      // The phone menu fills the screen below the header, so start from the top.
+      window.scrollTo(0, 0);
+      var bottom = header ? header.getBoundingClientRect().bottom : 0;
+      document.documentElement.style.setProperty('--menu-top', Math.max(0, bottom) + 'px');
+    }
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('menu-open', open);
     var label = toggle.querySelector('.menu-label');
     if (label) label.textContent = open ? 'Close' : 'Menu';
   }
+
+  // Phone menu: Septic & Aerobic / Engineering expand and collapse.
+  Array.prototype.forEach.call(document.querySelectorAll('.sub-toggle'), function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentNode;
+      var open = btn.getAttribute('aria-expanded') !== 'true';
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      item.classList.toggle('is-open', open);
+    });
+  });
 
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
