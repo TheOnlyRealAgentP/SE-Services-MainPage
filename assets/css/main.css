@@ -506,3 +506,21 @@ mark.todo {
 .prose-section + .section { padding-top: 0; }
 .h3-size { font-size: var(--fs-h3); }
 .card .check-list { margin: var(--s-2) 0 0; }
+
+/* Decorative stand-in for a missing photo when TODO markers are hidden:
+   navy "blueprint" grid with the logo mark. */
+.ph-blueprint {
+  display: grid; place-items: center; aspect-ratio: 4 / 3; border-radius: var(--radius);
+  background-color: var(--ink);
+  background-image:
+    linear-gradient(rgba(140, 203, 242, .18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(140, 203, 242, .18) 1px, transparent 1px),
+    linear-gradient(rgba(140, 203, 242, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(140, 203, 242, .07) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
+  background-position: -1px -1px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
+}
+.ph-blueprint img { width: 34%; max-width: 168px; opacity: .92; }
+.door-media .ph-blueprint { aspect-ratio: 16 / 9; border-radius: 0; }
+.door-media .ph-blueprint img { width: 24%; }

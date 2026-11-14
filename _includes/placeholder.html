@@ -1,4 +1,16 @@
-{%- comment -%} Stand-in for a photo we don't have yet. Usage: {% include placeholder.html what="a recent subdivision or site-plan project" %} {%- endcomment -%}
+{%- comment -%}
+  Stand-in for a photo we don't have yet.
+  Usage: {% include placeholder.html what="a recent subdivision or site-plan project" %}
+  With show_todos on, it's a yellow TODO box naming the photo needed.
+  With it off, it's a decorative blueprint panel with the logo mark.
+{%- endcomment -%}
+{%- if site.show_todos -%}
 <div class="ph{% if include.class %} {{ include.class }}{% endif %}">
   <p><mark class="todo">TODO: real photo of {{ include.what }}</mark></p>
 </div>
+{%- else -%}
+<div class="ph-blueprint{% if include.class %} {{ include.class }}{% endif %}" aria-hidden="true">
+  <!-- TODO: real photo of {{ include.what }} -->
+  <img src="/assets/img/logo-mark-reversed.svg" alt="" width="298" height="298" loading="lazy" decoding="async">
+</div>
+{%- endif -%}

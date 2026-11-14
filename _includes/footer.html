@@ -51,13 +51,20 @@
     </div>
   </div>
 
+  {%- if site.show_todos -%}
+    {%- assign lics = b.licenses -%}
+  {%- else -%}
+    {%- assign lics = b.licenses | where_exp: "l", "l.number != ''" -%}
+  {%- endif %}
+  {%- if lics.size > 0 %}
   <div class="container footer-licenses">
     <p>
-      {%- for l in b.licenses %}
+      {%- for l in lics %}
       <span>{{ l.label }}: {% if l.number != "" %}{{ l.number }}{% else %}{% include todo.html t="add number" %}{% endif %}</span>{% unless forloop.last %}<span class="sep" aria-hidden="true"> · </span>{% endunless %}
       {%- endfor %}
     </p>
   </div>
+  {%- endif %}
 
   <div class="container footer-bottom">
     <p>&copy; {{ site.time | date: "%Y" }} {{ b.name }}. All rights reserved.</p>

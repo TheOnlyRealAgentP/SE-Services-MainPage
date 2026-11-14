@@ -2,7 +2,7 @@
 {%- assign septic = site.data.services | where: "side", "septic" -%}
 {%- assign eng = site.data.services | where: "side", "engineering" -%}
 <form id="quote" class="quote-form" action="{{ b.form.action }}" method="POST" data-quote-form{% if b.form.action == "" %} data-unconfigured{% endif %}>
-  {%- if b.form.action == "" %}
+  {%- if b.form.action == "" and site.show_todos %}
   <p>{% include todo.html t="connect the form: add the Formspree or Web3Forms endpoint in _data/business.yml (form.action). Until then it shows an error and asks people to call." %}</p>
   {%- endif %}
   {%- if b.form.access_key != "" %}

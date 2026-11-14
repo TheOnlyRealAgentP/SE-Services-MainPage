@@ -14,6 +14,14 @@ url: "https://stewartengineeringservices.com"
 # custom domain is connected. The default layout adds it to every link.
 lang: en_US
 
+# Yellow "TODO" markers for missing facts and photos (see TODO.md).
+# false = hidden on the site: unfinished items are left out, missing photos
+# show a neutral blueprint panel, and each marker stays in the page source as
+# an HTML comment so scripts/check_site.py can still count them.
+# To see the markers while editing:
+#   bundle exec jekyll serve --baseurl "" --config _config.yml,_config.todos.yml
+show_todos: false
+
 # Used by jekyll-seo-tag for Open Graph / social cards.
 logo: /assets/img/logo.png
 social:

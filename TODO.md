@@ -1,8 +1,19 @@
 # TODO: missing facts, photos and checks
 
-Everything here shows on the site as a yellow **TODO** marker until it's
-dealt with. Nothing was guessed. Fill in what you know, delete the marker,
-and run `python3 scripts/check_site.py` to see how many are left.
+Nothing on the site was guessed; everything below is either missing or
+needs checking.
+
+**The markers are hidden on the live site** (`show_todos: false` in
+`_config.yml`). Unfinished items are simply left out. For example, the
+footer skips license numbers that are blank, and missing photos show a
+navy blueprint panel. To see every yellow TODO marker while you work:
+
+```bash
+bundle exec jekyll serve --baseurl "" --config _config.yml,_config.todos.yml
+```
+
+Hidden FAQ answers that still need verifying (section 3) **do** show on
+the live site as normal text, so check those first.
 
 Most business facts go in **`_data/business.yml`**; once a value is set,
 its marker disappears from every page.

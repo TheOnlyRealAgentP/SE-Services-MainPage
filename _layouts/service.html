@@ -98,7 +98,7 @@ layout: default
           <summary>{{ f.q }}</summary>
           <div class="faq-a">
             {{ f.a | markdownify }}
-            {%- if f.todo %}<p>{% include todo.html t=f.todo %}</p>{% endif %}
+            {%- if f.todo and site.show_todos %}<p>{% include todo.html t=f.todo %}</p>{% endif %}
           </div>
         </details>
         {%- endfor %}

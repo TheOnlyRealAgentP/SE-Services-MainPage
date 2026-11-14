@@ -21,8 +21,8 @@ _data/business.yml
 
 Edit a value there and it updates the header, footer, contact page,
 service-area page and the structured data Google reads, on every page. A
-value left as `""` shows on the site as a yellow **TODO** marker until you
-fill it in.
+value left as `""` is left off the live site, and it shows as a yellow
+**TODO** marker when you preview with markers on (see "Run it locally").
 
 Other data files:
 
@@ -102,7 +102,9 @@ bundle install                                 # once
 bundle exec jekyll serve --baseurl ""
 ```
 
-Open <http://localhost:4000>. Pages rebuild when you save. (Ruby 4.0 can't
+Open <http://localhost:4000>. Pages rebuild when you save. To also see the
+yellow TODO markers for missing facts and photos, which are hidden on the
+live site, add `--config _config.yml,_config.todos.yml`. (Ruby 4.0 can't
 build the `github-pages` gem yet; use Ruby 3.3.)
 
 ## Check before you push
@@ -115,7 +117,8 @@ python3 scripts/check_site.py
 The checker fails if any internal link is broken, a `href="#"` slipped in, a
 page is missing a title, description or H1 (or has two H1s), a title or
 description is too long or duplicated, structured data is invalid JSON, or an
-image has no alt text. It also counts the TODO markers left on the site.
+image has no alt text. It also counts the open TODOs and fails if the word
+"TODO" ever shows as ordinary page text.
 
 ## Deploy
 

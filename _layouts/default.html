@@ -22,6 +22,9 @@
 </body>
 </html>
 {%- endcapture -%}
+{%- unless site.show_todos -%}
+  {%- assign html = html | replace: '<mark class="todo">', '<!-- ' | replace: '</mark>', ' -->' -%}
+{%- endunless -%}
 {%- assign base = site.baseurl | default: "" -%}
 {%- if base != "" and base != "/" -%}
   {%- assign wrong_canonical = site.url | append: base -%}

@@ -14,7 +14,8 @@ Checks every page for:
   - every JSON-LD block parses as JSON
   - every <img> has an alt attribute
   - double-escaped ampersands (&amp;amp;)
-It also lists the TODO markers still showing on the site.
+It also counts open TODOs, whether shown as markers or hidden as comments,
+and fails if the word TODO shows up as ordinary page text.
 Uses only the Python standard library. Exits with status 1 if anything fails.
 """
 import json
@@ -133,9 +134,17 @@ def main():
             if "alt" not in img:
                 errors.append(f"{rel}: <img src={img.get('src')}> has no alt attribute")
 
-        n = len(re.findall(r'<mark class="todo">', raw))
-        if n:
-            todos[rel] = n
+        shown = len(re.findall(r'<mark class="todo">', raw))
+        hidden = len(re.findall(r"<!-- TODO", raw))
+        if shown or hidden:
+            todos[rel] = (shown, hidden)
+        # "TODO" must never appear as ordinary page text, only inside a
+        # marker (show_todos: true) or an HTML comment (show_todos: false).
+        body = raw.split("<body", 1)[-1]
+        stray = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+        stray = re.sub(r'<mark class="todo">.*?</mark>', "", stray, flags=re.S)
+        if "TODO" in stray:
+            errors.append(f"{rel}: 'TODO' text outside a marker")
 
         if p.redirect:
             continue  # redirect stubs only need a working target
@@ -166,9 +175,12 @@ def main():
 
     print(f"Checked {len(pages)} pages in {SITE}/")
     if todos:
-        print(f"TODO markers still visible: {sum(todos.values())} on {len(todos)} pages")
+        shown = sum(v[0] for v in todos.values())
+        hidden = sum(v[1] for v in todos.values())
+        print(f"Open TODOs: {shown} shown as yellow markers, {hidden} hidden as HTML comments, on {len(todos)} pages")
+        print("  shown hidden  page")
         for k, v in sorted(todos.items()):
-            print(f"  {v:3d}  {k}")
+            print(f"  {v[0]:5d} {v[1]:6d}  {k}")
     if errors:
         print(f"\n{len(errors)} problem(s):")
         for e in errors:

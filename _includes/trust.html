@@ -1,12 +1,18 @@
 {%- assign b = site.data.business -%}
-{%- assign shown = b.licenses | where: "trust", true -%}
+{%- assign trust_lics = b.licenses | where: "trust", true -%}
+{%- assign trust_filled = trust_lics | where_exp: "l", "l.number != ''" -%}
 <ul class="trust" aria-label="Why customers choose us">
   <li><strong>50+ years</strong> of engineering experience</li>
   <li><strong>Family-owned</strong> in {{ b.address.city }}, TX</li>
+  {%- if site.show_todos or trust_filled.size > 0 %}
+  {%- unless site.show_todos %}{% assign trust_lics = trust_filled %}{% endunless %}
   <li><strong>Licensed:</strong>
-    {%- for l in shown %}
+    {%- for l in trust_lics %}
     {{ l.short }} {% if l.number != "" %}#{{ l.number }}{% else %}{% include todo.html t="#" %}{% endif %}{% unless forloop.last %},{% endunless %}
     {%- endfor %}</li>
+  {%- else %}
+  <li><strong>Licensed</strong> installers and engineers in Texas</li>
+  {%- endif %}
   <li><strong>{{ b.towns.size }} communities</strong> served, including <a href="/service-area">{{ b.towns[0].name }}, {{ b.towns[1].name }} &amp; {{ b.towns[2].name }}</a></li>
   {%- if b.rating.value != "" and b.rating.source_url != "" %}
   <li><a href="{{ b.rating.source_url }}" rel="noopener"><strong>{{ b.rating.value }} out of 5</strong> from {{ b.rating.count }} reviews</a></li>

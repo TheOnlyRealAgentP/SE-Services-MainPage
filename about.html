@@ -12,8 +12,10 @@ lede: A family business in Channelview that does two kinds of work, septic syste
   <div class="container two-col">
     <div class="prose">
       <h2 id="story-heading">Our story</h2>
+      {%- if site.show_todos %}
       <p>{% include todo.html t="founding story: who started the company, when, and how the septic side and the engineering side came together" %}</p>
-      <p>Today we do two kinds of work that have more in common than you'd think. Homeowners call us when a septic or aerobic system needs installing, inspecting or fixing. Builders, developers and business owners call us when land needs to be planned, platted, drained or brought up to fire code. Both come down to the same thing: an engineered plan that works on the ground and gets approved.</p>
+      {%- endif %}
+      <p>We do two kinds of work that have more in common than you'd think. Homeowners call us when a septic or aerobic system needs installing, inspecting or fixing. Builders, developers and business owners call us when land needs to be planned, platted, drained or brought up to fire code. Both come down to the same thing: an engineered plan that works on the ground and gets approved.</p>
       <h2>One name, one website</h2>
       <p>You may know us as <strong>AIMS</strong> or <strong>Stewart Aerobic</strong> from aerobicservice.com, or as <strong>Stewart Engineering</strong> from se.services. It's the same family, the same office on {{ b.address.street }} and the same phone number, now under one name: {{ b.name }}.</p>
     </div>
@@ -23,6 +25,22 @@ lede: A family business in Channelview that does two kinds of work, septic syste
   </div>
 </section>
 
+{%- if site.show_todos -%}
+  {%- assign lics = b.licenses -%}
+{%- else -%}
+  {%- assign lics = b.licenses | where_exp: "l", "l.number != ''" -%}
+{%- endif -%}
+{%- capture license_list -%}
+{%- if lics.size > 0 %}
+      <h3>Licenses and registrations</h3>
+      <ul>
+        {%- for l in lics %}
+        <li>{{ l.label }}: {% if l.number != "" %}{{ l.number }}{% else %}{% include todo.html t="add number" %}{% endif %}</li>
+        {%- endfor %}
+      </ul>
+{%- endif %}
+{%- endcapture -%}
+{%- if b.owner.name != "" or site.show_todos %}
 <section class="section section-alt" aria-labelledby="owner-heading">
   <div class="container two-col">
     <div>
@@ -31,16 +49,20 @@ lede: A family business in Channelview that does two kinds of work, septic syste
     <div class="prose">
       <h2 id="owner-heading">{% if b.owner.name != "" %}{{ b.owner.name }}{% else %}Meet the owner{% endif %}</h2>
       {%- if b.owner.title != "" %}<p class="eyebrow">{{ b.owner.title }}</p>{% endif %}
+      {%- if site.show_todos %}
       <p>{% include todo.html t="owner name and title (set them in _data/business.yml), plus 2–3 sentences about the owner: background, licenses and what they handle personally" %}</p>
-      <h3>Licenses and registrations</h3>
-      <ul>
-        {%- for l in b.licenses %}
-        <li>{{ l.label }}: {% if l.number != "" %}{{ l.number }}{% else %}{% include todo.html t="add number" %}{% endif %}</li>
-        {%- endfor %}
-      </ul>
+      {%- endif %}
+      {{ license_list }}
     </div>
   </div>
 </section>
+{%- elsif lics.size > 0 %}
+<section class="section section-alt" aria-label="Licenses and registrations">
+  <div class="container prose">
+    {{ license_list }}
+  </div>
+</section>
+{%- endif %}
 
 <section class="section" aria-labelledby="expect-heading">
   <div class="container">

@@ -1,0 +1,2 @@
+# Local override: show the yellow TODO markers. See show_todos in _config.yml.
+show_todos: true
