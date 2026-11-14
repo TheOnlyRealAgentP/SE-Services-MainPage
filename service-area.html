@@ -13,18 +13,21 @@ lede: We serve East Harris County and the surrounding communities from our offic
   _data/business.yml. Keep each paragraph specific to that town.
 {%- endcomment -%}
 <section class="section" aria-labelledby="map-heading">
-  <div class="container two-col">
+  <div class="container area-grid">
     <div>
       <h2 id="map-heading" class="rule">Our service area</h2>
-      <p>Our office is at {{ b.address.street }}, {{ b.address.city }}, {{ b.address.region }} {{ b.address.postal_code }}. Our septic services are concentrated in the surrounding communities, and our engineering services cover Harris County and the neighboring counties.</p>
+      <p>Our office is located at {{ b.address.street }}, {{ b.address.city }}, {{ b.address.region }} {{ b.address.postal_code }}. Our septic services are concentrated in the surrounding communities, and our engineering services cover Harris County and the neighboring counties.</p>
+      <p>Select a community on the map or below to read about the services we provide there.</p>
       <ul class="town-list" aria-label="Jump to a town">
         {%- for t in b.towns %}
-        <li><a href="#{{ t.slug }}">{{ t.name }}</a></li>
+        <li><a href="#{{ t.slug }}" data-town="{{ t.slug }}">{{ t.name }}</a></li>
         {%- endfor %}
       </ul>
+      <p class="map-link"><a href="{{ b.maps_url }}" rel="noopener">{% include icon.html name="pin" %} Directions to our office in Google Maps</a></p>
     </div>
     <div>
-      {% include map.html %}
+      {% include area-map.html prefix="" id="area" %}
+      <p class="map-note">Shaded areas show city and community boundaries (U.S. Census Bureau). We also serve the surrounding unincorporated areas.</p>
     </div>
   </div>
 </section>

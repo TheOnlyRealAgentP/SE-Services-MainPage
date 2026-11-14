@@ -139,6 +139,11 @@ within a minute. Domain setup is in the local `DEPLOY.md`, which is not committe
   County elevation contours (every 10 ft, heavier every 50 ft) inside the
   county line. Built from AWS Terrain Tiles (USGS NED and SRTM, public
   domain) and the U.S. Census TIGER county boundary.
+- Service-area map: `_includes/area-map.html`, an inline SVG built from
+  U.S. Census TIGER data (town and county boundaries, water, highways), with
+  each town linking to its section on /service-area. To rebuild it (for
+  example after adding a town), run `scripts/fetch_map_data.sh` and then
+  `scripts/area_map.py`; instructions are at the top of the fetch script.
 - Logo: `assets/img/logo.svg` (and `logo-reversed.svg` for dark
   backgrounds), rebuilt as a vector from the original Stewart Engineering
   logo.

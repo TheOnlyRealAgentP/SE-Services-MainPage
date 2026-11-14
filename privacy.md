@@ -31,7 +31,7 @@ We don't sell or rent your information. We share it only when we need to:
 
 ## Maps
 
-Our contact and service-area pages show an embedded Google Map. When it loads, Google may collect information under [Google's privacy policy](https://policies.google.com/privacy).
+Our contact page shows an embedded Google Map. When it loads, Google may collect information under [Google's privacy policy](https://policies.google.com/privacy).
 
 ## Your choices
 

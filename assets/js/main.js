@@ -51,6 +51,18 @@
     else if (desktop.addListener) desktop.addListener(onChange);
   }
 
+  /* ---------- Service-area map: highlight a town on the map and in the list together ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-town]'), function (el) {
+    var slug = el.getAttribute('data-town');
+    function hot(on) {
+      Array.prototype.forEach.call(document.querySelectorAll('[data-town="' + slug + '"]'), function (x) { x.classList.toggle('is-hot', on); });
+    }
+    el.addEventListener('mouseenter', function () { hot(true); });
+    el.addEventListener('mouseleave', function () { hot(false); });
+    el.addEventListener('focus', function () { hot(true); });
+    el.addEventListener('blur', function () { hot(false); });
+  });
+
   /* ---------- Review carousel ---------- */
   Array.prototype.forEach.call(document.querySelectorAll('[data-reviews]'), function (root) {
     var track = root.querySelector('.reviews-track');

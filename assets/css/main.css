@@ -796,3 +796,44 @@ html:not(.js) .reviews-controls { display: none; }
 .rv-dot[aria-current="true"]::before { background: var(--accent); transform: scale(1.25); }
 .reviews-cta { text-align: center; margin-top: var(--s-2); }
 .section-alt .review-slide { background: var(--white); }
+
+/* ---------- Service-area map (_includes/area-map.html) ---------- */
+.area-map { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--radius); background: #F3F5F7; box-shadow: var(--shadow); }
+.am-land { fill: #F3F5F7; }
+.am-water { fill: #CDE1EF; }
+.am-county-line { fill: none; stroke: #8A99AB; stroke-width: 1.6; stroke-dasharray: 8 6; }
+.am-road { fill: none; stroke: #C5CDD6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.am-shape { fill: rgba(142, 42, 49, .13); stroke: var(--accent); stroke-width: 1.6; stroke-linejoin: round; transition: fill .15s, stroke-width .15s; }
+.am-dot { fill: var(--accent); stroke: #fff; stroke-width: 3; transform-box: fill-box; transform-origin: center; transition: transform .15s; }
+.am-office { fill: var(--ink); }
+.am-dot-core { fill: #fff; }
+.am-label { font-family: var(--font-head); font-size: 27px; font-weight: 700; fill: var(--ink); paint-order: stroke; stroke: #fff; stroke-width: 6px; stroke-linejoin: round; }
+.am-sub { font-family: var(--font); font-size: 18px; font-weight: 700; fill: var(--accent); }
+.am-water-label { font-family: var(--font); font-style: italic; font-size: 20px; fill: #3F6E90; }
+.am-water-label.am-small { font-size: 16px; }
+.am-county { font-family: var(--font-head); font-size: 17px; font-weight: 600; letter-spacing: .16em; fill: #6B7A8C; }
+.am-city { font-size: 17px; font-weight: 600; fill: #556274; }
+.am-shield rect { fill: #fff; stroke: #6B7A8C; stroke-width: 1.5; }
+.am-shield text { font-family: var(--font-head); font-size: 14px; font-weight: 700; fill: #334155; }
+.am-scale rect { fill: var(--ink); }
+.am-scale .am-scale-alt { fill: #fff; stroke: var(--ink); stroke-width: 1; }
+.am-scale text, .am-north text { font-family: var(--font-head); font-size: 15px; font-weight: 700; fill: #334155; }
+.am-north path { fill: var(--ink); }
+.am-town { cursor: pointer; outline: none; }
+.am-town:hover .am-shape, .am-town:focus-visible .am-shape, .am-town.is-hot .am-shape { fill: rgba(142, 42, 49, .34); stroke-width: 3; }
+.am-town:hover .am-dot, .am-town:focus-visible .am-dot, .am-town.is-hot .am-dot { transform: scale(1.35); }
+.am-town:hover .am-label, .am-town:focus-visible .am-label, .am-town.is-hot .am-label { fill: var(--accent); }
+.am-town:focus-visible .am-label { text-decoration: underline; }
+.town-list a.is-hot { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+.map-note { margin-top: var(--s-1); font-size: var(--fs-sm); color: var(--muted); }
+.area-grid { display: grid; gap: var(--s-4); align-items: center; }
+@media (min-width: 900px) { .area-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--s-6); } }
+/* Larger labels when the map is drawn small on phones */
+@media (max-width: 767px) {
+  .am-label { font-size: 36px; stroke-width: 8px; }
+  .am-sub { font-size: 24px; }
+  .am-water-label { font-size: 26px; }
+  .am-water-label.am-small, .am-county, .am-city { font-size: 21px; }
+  .am-shield { display: none; }
+  .am-dot { transform: scale(1.4); }
+}
