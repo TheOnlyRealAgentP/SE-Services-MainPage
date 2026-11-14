@@ -1,0 +1,10 @@
+{%- assign b = site.data.business -%}
+{%- assign qs = page.quote_service -%}
+{%- unless qs -%}
+  {%- if page.side == "engineering" -%}{%- assign qs = "engineering-consult" -%}
+  {%- elsif page.side == "septic" -%}{%- assign qs = "maintenance" -%}{%- endif -%}
+{%- endunless -%}
+<div class="sticky-bar" role="region" aria-label="Quick contact">
+  <a class="btn btn-primary" href="tel:{{ b.phone_href }}">{% include icon.html name="phone" %} Call</a>
+  <a class="btn btn-secondary" href="/contact{% if qs %}?service={{ qs }}{% endif %}#quote">Get a Quote</a>
+</div>

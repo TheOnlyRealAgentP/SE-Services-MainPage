@@ -1,0 +1,19 @@
+{%- comment -%} FAQ answers go in as plain text. "todo" notes are left out on purpose. {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for f in page.faqs %}
+    {
+      "@type": "Question",
+      "name": {{ f.q | strip_html | strip | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ f.a | markdownify | strip_html | normalize_whitespace | strip | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>

@@ -1,0 +1,16 @@
+{%- assign svc = site.data.services | where: "id", include.id | first -%}
+<section class="section related" aria-labelledby="related-heading">
+  <div class="container">
+    <h2 id="related-heading">Related services</h2>
+    <ul class="card-grid card-grid-3">
+      {%- for rid in svc.related %}
+      {%- assign r = site.data.services | where: "id", rid | first %}
+      <li class="card link-card">
+        <h3><a href="{{ r.url }}">{{ r.title }}</a></h3>
+        <p>{{ r.summary }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+    <p class="related-more">Not sure what you need? See <a href="/services">all services</a>, check <a href="/service-area">the towns we serve</a>, or <a href="/contact">contact us</a>.</p>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+{% seo %}
+<meta name="theme-color" content="#0E2338">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/main.css?v={{ site.time | date: '%s' }}">
+<script src="/assets/js/main.js?v={{ site.time | date: '%s' }}" defer></script>
+{% include schema-business.html %}
+{% if page.layout == 'service' %}{% include schema-service.html %}{% endif %}
+{% if page.faqs %}{% include schema-faq.html %}{% endif %}

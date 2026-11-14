@@ -1,0 +1,117 @@
+---
+layout: default
+title: Septic & Engineering, Houston
+description: Aerobic septic maintenance, repair and installation for homeowners, plus civil engineering for builders and developers. Family-owned in Channelview, TX.
+side: both
+---
+{%- assign b = site.data.business -%}
+<section class="home-hero">
+  <div class="container home-hero-grid">
+    <div>
+      <p class="eyebrow">Channelview, TX · Serving east Harris County</p>
+      <h1>Septic, aerobic and civil engineering services in east Harris County</h1>
+      <p class="lede">{{ b.name }} is a family business in {{ b.address.city }}. Homeowners call us to install, maintain and repair septic and aerobic systems. Builders and developers call us for site plans, drainage, platting and fire code work. Same office, same phone number.</p>
+      {% include trust.html %}
+    </div>
+    <aside class="office-card" aria-labelledby="office-heading">
+      <h2 id="office-heading">Talk to our office</h2>
+      <a class="big-phone" href="tel:{{ b.phone_href }}">{% include icon.html name="phone" %}{{ b.phone }}</a>
+      {% include hours-table.html %}
+      <a class="btn btn-primary" href="/contact#quote">Request a quote online</a>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-flush-top" aria-label="Choose your service">
+  <div class="container">
+    <div class="doors">
+      <article class="door">
+        <div class="door-media">
+          {% include picture.html name="aerobic-system-lawn" eager=true sizes="(min-width: 1184px) 544px, (min-width: 860px) 46vw, 100vw" %}
+        </div>
+        <div class="door-body">
+          <p class="eyebrow">For homeowners</p>
+          <h2>Septic &amp; Aerobic</h2>
+          <p>Keep your system inspected and running, get it fixed when it isn't, or put in a new one.</p>
+          <ul class="check-list">
+            <li>{% include icon.html name="check" %}<span><a href="/maintenance">Maintenance contracts</a> with an inspection every four months</span></li>
+            <li>{% include icon.html name="check" %}<span><a href="/services-repairs">Alarm calls, repairs and pump-outs</a></span></li>
+            <li>{% include icon.html name="check" %}<span><a href="/installation">New residential and commercial systems</a></span></li>
+          </ul>
+          <div class="door-actions">
+            <a class="btn btn-primary btn-lg" href="/contact?service=maintenance#quote">Start a maintenance contract</a>
+            <a class="text-link" href="/services#septic">All septic services {% include icon.html name="arrow" %}</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="door">
+        <div class="door-media">
+          {% include placeholder.html what="a recent engineering project (site plan, subdivision or commercial site)" %}
+        </div>
+        <div class="door-body">
+          <p class="eyebrow">For builders &amp; developers</p>
+          <h2>Engineering</h2>
+          <p>Get a property planned, platted and permitted, with drainage, utilities and fire code handled by one team.</p>
+          <ul class="check-list">
+            <li>{% include icon.html name="check" %}<span><a href="/land-development">Land development</a> and <a href="/platting">platting</a></span></li>
+            <li>{% include icon.html name="check" %}<span><a href="/drainageimp">Drainage, detention and storm water plans</a></span></li>
+            <li>{% include icon.html name="check" %}<span><a href="/wastewater">Water and wastewater</a>, <a href="/fireprotect">fire protection</a> and <a href="/firecode">fire code</a></span></li>
+          </ul>
+          <div class="door-actions">
+            <a class="btn btn-primary btn-lg" href="/contact?service=engineering-consult#quote">Request a project consultation</a>
+            <a class="text-link" href="/engineering/">All engineering services {% include icon.html name="arrow" %}</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="both-heading">
+  <div class="container two-col two-col-center">
+    <div>
+      <h2 id="both-heading">Engineers and installers under one roof</h2>
+      <p>Most septic companies send the design work to an outside engineer, and most engineering firms never pick up a shovel. We do both. The same company surveys the site, designs the system, handles the permit, installs it and comes back for the inspections.</p>
+      <p>That matters when something doesn't fit the standard answer: a tight lot, a high water table, a commercial building with more flow than a house, or a permit that has stalled. You talk to people who can do the math and do the work.</p>
+      <ul class="check-list">
+        <li>{% include icon.html name="check" %}<span>{{ b.founded_note | capitalize }}</span></li>
+        <li>{% include icon.html name="check" %}<span>Licensed installers and technicians (TCEQ)</span></li>
+        <li>{% include icon.html name="check" %}<span>A written estimate before any repair or upgrade</span></li>
+      </ul>
+      <p><a class="text-link" href="/about">More about us {% include icon.html name="arrow" %}</a></p>
+    </div>
+    <div>
+      {% include picture.html name="tanks-set-in-excavation" sizes="(min-width: 768px) 46vw, 100vw" %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="reviews-heading">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="reviews-heading">What customers say</h2>
+      <p>Reviews from Yelp, HomeAdvisor and Google, quoted as written.</p>
+    </div>
+    <div class="testimonials">
+      {%- for t in site.data.testimonials %}
+      {% include testimonial.html id=t.id %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="area-heading">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="area-heading">Serving {{ b.address.city }} and east Harris County</h2>
+      <p>Our office is at {{ b.address.street }} in {{ b.address.city }}. We work in these communities and the areas around them.</p>
+    </div>
+    <ul class="town-list">
+      {%- for t in b.towns %}
+      <li><a href="/service-area#{{ t.slug }}">{{ t.name }}</a></li>
+      {%- endfor %}
+    </ul>
+    <p class="after-list"><a class="text-link" href="/service-area">See the full service area {% include icon.html name="arrow" %}</a></p>
+  </div>
+</section>

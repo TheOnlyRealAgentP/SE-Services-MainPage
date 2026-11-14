@@ -1,0 +1,28 @@
+# Photos in /assets/img. Each photo exists as <name>-<width>.webp and
+# <name>-<width>.jpg for every width listed. width/height is the aspect
+# ratio of the largest file (used to reserve space and avoid layout jumps).
+# All four are the company's own job-site photos from aerobicservice.com.
+
+aerobic-system-lawn:
+  widths: [480, 800, 1200]
+  width: 1200
+  height: 900
+  alt: Finished aerobic septic system set in a lawn, with green access lids on round concrete tank tops and crew members at the control panel in the background
+
+tanks-set-in-excavation:
+  widths: [480, 800]
+  width: 800
+  height: 1000
+  alt: Two concrete septic tanks with green access lids newly set in an open excavation beside a sport court
+
+tank-hookup-trench:
+  widths: [480, 800]
+  width: 800
+  height: 1000
+  alt: Technician in an open excavation connecting PVC piping to two concrete tanks fitted with green risers
+
+pvc-line-trench:
+  widths: [480, 800]
+  width: 800
+  height: 1000
+  alt: New PVC line laid in a freshly dug trench along the brick wall of a house

@@ -1,0 +1,66 @@
+{%- assign b = site.data.business -%}
+{%- assign septic = site.data.services | where: "side", "septic" -%}
+{%- assign eng = site.data.services | where: "side", "engineering" -%}
+<footer class="site-footer on-dark">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/">{% include logo.html variant="reversed" %}</a>
+      <address class="nap">
+        <strong>{{ b.name }}</strong><br>
+        {{ b.address.street }}<br>
+        {{ b.address.city }}, {{ b.address.region }} {{ b.address.postal_code }}<br>
+        <a href="tel:{{ b.phone_href }}">{{ b.phone }}</a><br>
+        <a href="mailto:{{ b.email }}">{{ b.email }}</a>
+      </address>
+      <p class="footer-hours"><span class="footer-label">Office hours</span><br>
+        {%- for h in b.hours %}
+        {{ h.label }}: {{ h.display }}{% unless forloop.last %}<br>{% endunless %}
+        {%- endfor %}
+      </p>
+    </div>
+
+    <div>
+      <h2 class="footer-heading">Septic &amp; Aerobic</h2>
+      <ul class="footer-links">
+        {%- for s in septic %}
+        <li><a href="{{ s.url }}">{{ s.title }}</a></li>
+        {%- endfor %}
+        <li><a href="/faqs">Homeowner FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="footer-heading">Engineering</h2>
+      <ul class="footer-links">
+        <li><a href="/engineering/">Engineering overview</a></li>
+        {%- for s in eng %}
+        <li><a href="{{ s.url }}">{{ s.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="footer-heading">Company</h2>
+      <ul class="footer-links">
+        <li><a href="/about">About us</a></li>
+        <li><a href="/services">All services</a></li>
+        <li><a href="/service-area">Service area</a></li>
+        <li><a href="/contact">Contact &amp; quotes</a></li>
+        <li><a href="{{ b.social.facebook }}" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-licenses">
+    <p>
+      {%- for l in b.licenses %}
+      <span>{{ l.label }}: {% if l.number != "" %}{{ l.number }}{% else %}{% include todo.html t="add number" %}{% endif %}</span>{% unless forloop.last %}<span class="sep" aria-hidden="true"> · </span>{% endunless %}
+      {%- endfor %}
+    </p>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ b.name }}. All rights reserved.</p>
+    <p><a href="/privacy">Privacy</a><span aria-hidden="true"> · </span><a href="/terms">Terms</a></p>
+  </div>
+</footer>

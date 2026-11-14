@@ -1,0 +1,48 @@
+{%- assign b = site.data.business -%}
+{%- assign septic = site.data.services | where: "side", "septic" -%}
+{%- assign eng = site.data.services | where: "side", "engineering" -%}
+<div class="topbar on-dark">
+  <div class="container topbar-inner">
+    <a class="topbar-phone" href="tel:{{ b.phone_href }}">{% include icon.html name="phone" %}<span>Call {{ b.phone }}</span></a>
+    <span class="topbar-hours">{{ b.hours_short }}</span>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/">{% include logo.html %}</a>
+
+    <a class="header-phone" href="tel:{{ b.phone_href }}">
+      {% include icon.html name="phone" %}<span class="visually-hidden">Call </span><span>{{ b.phone }}</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-bars" aria-hidden="true"></span><span class="menu-label">Menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li class="has-sub">
+          <a href="/services#septic"{% if page.side == 'septic' %} class="is-section"{% endif %}>Septic &amp; Aerobic</a>
+          <ul class="sub">
+            {%- for s in septic %}
+            <li><a href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}>{{ s.short }}</a></li>
+            {%- endfor %}
+            <li><a href="/faqs"{% if page.url == '/faqs' %} aria-current="page"{% endif %}>Homeowner FAQ</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="/engineering/"{% if page.url == '/engineering/' %} aria-current="page"{% elsif page.side == 'engineering' %} class="is-section"{% endif %}>Engineering</a>
+          <ul class="sub">
+            {%- for s in eng %}
+            <li><a href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}>{{ s.short }}</a></li>
+            {%- endfor %}
+          </ul>
+        </li>
+        <li><a href="/service-area"{% if page.url == '/service-area' %} aria-current="page"{% endif %}>Service Area</a></li>
+        <li><a href="/about"{% if page.url == '/about' %} aria-current="page"{% endif %}>About</a></li>
+        <li><a href="/contact"{% if page.url == '/contact' %} aria-current="page"{% endif %}>Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="/contact#quote">Get a Quote</a>
+    </nav>
+  </div>
+</header>

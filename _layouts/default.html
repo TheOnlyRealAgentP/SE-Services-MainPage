@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+<body class="side-{{ page.side | default: 'both' }}">
+<a class="skip-link" href="#main">Skip to main content</a>
+{% include header.html %}
+<main id="main" tabindex="-1">
+{{ content }}
+</main>
+{% unless page.cta == false %}{% include cta-band.html side=page.side %}{% endunless %}
+{% include footer.html %}
+{% include sticky-bar.html %}
+</body>
+</html>

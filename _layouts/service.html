@@ -1,0 +1,113 @@
+---
+layout: default
+---
+{%- comment -%}
+  Shared template for every service page. Structure:
+  hero (H1, intro, CTAs, trust) → who it's for → what's included → process →
+  FAQ + testimonial → related services → CTA band (from default layout).
+  All of it is driven by the page's front matter.
+{%- endcomment -%}
+{%- assign b = site.data.business -%}
+{%- assign svc = site.data.services | where: "id", page.service_id | first -%}
+{%- if page.side == "engineering" -%}
+  {%- assign hub_url = "/engineering/" -%}{%- assign hub_name = "Engineering" -%}
+{%- else -%}
+  {%- assign hub_url = "/services#septic" -%}{%- assign hub_name = "Septic & Aerobic" -%}
+{%- endif -%}
+<section class="service-hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="{{ hub_url }}">{{ hub_name | escape }}</a></li>
+          <li aria-current="page">{{ svc.short }}</li>
+        </ol>
+      </nav>
+      <h1>{{ page.h1 }}</h1>
+      <p class="lede">{{ page.lede }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="/contact?service={{ page.quote_service }}#quote">{{ page.cta_label }}</a>
+        <a class="btn btn-secondary btn-lg" href="tel:{{ b.phone_href }}">{% include icon.html name="phone" %} {{ b.phone }}</a>
+      </div>
+      {% include trust.html %}
+    </div>
+    <div class="hero-media">
+      {%- if page.image %}
+      {% include picture.html name=page.image eager=true sizes="(min-width: 960px) 460px, (min-width: 640px) 560px, 100vw" %}
+      {%- else %}
+      {% include placeholder.html what=page.placeholder %}
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+{%- if content != "" %}
+<section class="section prose-section">
+  <div class="container prose">
+    {{ content }}
+  </div>
+</section>
+{%- endif %}
+
+<section class="section" aria-label="Who it's for and what's included">
+  <div class="container two-col">
+    <div>
+      <h2>Who it's for</h2>
+      <ul class="check-list">
+        {%- for w in page.who %}
+        <li>{% include icon.html name="check" %}<span>{{ w | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2>What's included</h2>
+      <ul class="check-list">
+        {%- for i in page.included %}
+        <li>{% include icon.html name="check" %}<span>{{ i | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="process-heading">
+  <div class="container">
+    <h2 id="process-heading">{{ page.process_heading | default: "How it works" }}</h2>
+    <ol class="steps">
+      {%- for s in page.steps %}
+      <li>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-heading">
+  <div class="container faq-grid">
+    <div>
+      <h2 id="faq-heading">Questions about {{ svc.title | downcase | replace: "&", "and" }}</h2>
+      <div class="faq">
+        {%- for f in page.faqs %}
+        <details>
+          <summary>{{ f.q }}</summary>
+          <div class="faq-a">
+            {{ f.a | markdownify }}
+            {%- if f.todo %}<p>{% include todo.html t=f.todo %}</p>{% endif %}
+          </div>
+        </details>
+        {%- endfor %}
+      </div>
+      {%- if page.side == "septic" %}
+      <p class="faq-more">More answers on the <a href="/faqs">homeowner FAQ</a>.</p>
+      {%- endif %}
+    </div>
+    <aside aria-label="Customer review">
+      {% include testimonial.html id=page.testimonial %}
+    </aside>
+  </div>
+</section>
+
+{% include related.html id=page.service_id %}

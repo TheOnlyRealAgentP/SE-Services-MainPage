@@ -1,0 +1,34 @@
+{%- assign b = site.data.business -%}
+{%- assign side = include.side | default: "both" -%}
+<section class="cta-band on-dark" aria-labelledby="cta-heading">
+  <div class="container cta-inner">
+    {%- if side == "septic" %}
+    <div>
+      <h2 id="cta-heading">Put your aerobic system on a maintenance contract</h2>
+      <p>Inspections every four months, a written report after each visit, and one number to call when the alarm goes off.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-light btn-lg" href="/contact?service=maintenance#quote">Start a maintenance contract</a>
+      <a class="btn btn-ghost btn-lg" href="tel:{{ b.phone_href }}">{% include icon.html name="phone" %} Call {{ b.phone }}</a>
+    </div>
+    {%- elsif side == "engineering" %}
+    <div>
+      <h2 id="cta-heading">Have a site, a plat or a permit to sort out?</h2>
+      <p>Tell us about the property and what you need approved. We'll tell you what it takes and what it costs.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-light btn-lg" href="/contact?service=engineering-consult#quote">Request a project consultation</a>
+      <a class="btn btn-ghost btn-lg" href="tel:{{ b.phone_href }}">{% include icon.html name="phone" %} Call {{ b.phone }}</a>
+    </div>
+    {%- else %}
+    <div>
+      <h2 id="cta-heading">Talk to someone who knows septic and engineering</h2>
+      <p>Call during office hours or send a request and we'll get back to you.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-light btn-lg" href="/contact#quote">Get a quote</a>
+      <a class="btn btn-ghost btn-lg" href="tel:{{ b.phone_href }}">{% include icon.html name="phone" %} Call {{ b.phone }}</a>
+    </div>
+    {%- endif %}
+  </div>
+</section>

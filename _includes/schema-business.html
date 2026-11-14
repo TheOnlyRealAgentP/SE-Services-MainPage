@@ -1,0 +1,59 @@
+{%- assign b = site.data.business -%}
+{%- capture same_as -%}
+{{ b.social.facebook | jsonify }}{% if b.social.google_business != "" %}, {{ b.social.google_business | jsonify }}{% endif %}
+{%- endcapture -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "{{ b.url }}/#business",
+  "name": {{ b.name | jsonify }},
+  "url": {{ b.url | append: "/" | jsonify }},
+  "telephone": {{ b.phone_href | jsonify }},
+  "email": {{ b.email | jsonify }},
+  "image": {{ b.url | append: "/assets/img/og-image.jpg" | jsonify }},
+  "logo": {{ b.url | append: "/assets/img/logo.png" | jsonify }},
+  "description": {{ site.description | strip | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ b.address.street | jsonify }},
+    "addressLocality": {{ b.address.city | jsonify }},
+    "addressRegion": {{ b.address.region | jsonify }},
+    "postalCode": {{ b.address.postal_code | jsonify }},
+    "addressCountry": {{ b.address.country | jsonify }}
+  },
+  {%- if b.geo.latitude != "" and b.geo.longitude != "" %}
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ b.geo.latitude }},
+    "longitude": {{ b.geo.longitude }}
+  },
+  {%- endif %}
+  "hasMap": {{ b.maps_url | jsonify }},
+  "openingHoursSpecification": [
+    {%- assign open_hours = b.hours | where_exp: "h", "h.opens" -%}
+    {%- for h in open_hours %}
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": {{ h.days | jsonify }},
+      "opens": {{ h.opens | jsonify }},
+      "closes": {{ h.closes | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Harris County, TX" },
+    {%- for t in b.towns %}
+    { "@type": "City", "name": {{ t.name | append: ", TX" | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
+  {%- if b.rating.value != "" and b.rating.count != "" %}
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": {{ b.rating.value | jsonify }},
+    "reviewCount": {{ b.rating.count | jsonify }}
+  },
+  {%- endif %}
+  "sameAs": [{{ same_as }}]
+}
+</script>

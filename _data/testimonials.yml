@@ -1,0 +1,36 @@
+# Real customer reviews, copied word for word from aerobicservice.com.
+# Only obvious typos were fixed ("Mr, Stewart" -> "Mr. Stewart", "Its" -> "It's").
+# Never add a review here that a real customer did not write.
+
+- id: michael-c
+  name: Michael C.
+  town: Spring, TX
+  source: Yelp
+  side: engineering
+  quote: >-
+    Stewart Engineering did a fantastic job for me on a large, complex
+    construction & development project. They assisted with the design,
+    engineering, and consulting services. Their results far exceeded my
+    expectations. And they were really good to work with. In particular, Joe
+    was extraordinarily phenomenal! I will definitely be calling Joe at Stewart
+    Engineering Services on my next project.
+
+- id: kathy-b
+  name: Kathy B.
+  town: Crosby, TX
+  source: HomeAdvisor
+  side: septic
+  quote: >-
+    Highly recommend. Liked that they can maintain, repair & pump your septic
+    system. ...
+
+- id: ibarra-family
+  name: The Ibarra Family
+  town: ""
+  source: Google
+  side: septic
+  quote: >-
+    Mr. Stewart has just blessed our family with his services. I highly
+    recommend Mr Stewart. It's been a struggle figuring out the whole permit
+    process, We are finally sealed and ready for continuing and completing our
+    plans for our home. Thank you Mr Stewart we will pass on the blessing.

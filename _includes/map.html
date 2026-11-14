@@ -1,0 +1,5 @@
+{%- assign b = site.data.business -%}
+<div class="map">
+  <iframe src="{{ b.maps_embed }}" title="Map showing {{ b.name }} at {{ b.address.street }}, {{ b.address.city }}, {{ b.address.region }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="400"></iframe>
+</div>
+<p class="map-link"><a href="{{ b.maps_url }}" rel="noopener">{% include icon.html name="pin" %} Get directions in Google Maps</a></p>

@@ -1,0 +1,10 @@
+{%- assign t = site.data.testimonials | where: "id", include.id | first -%}
+<figure class="testimonial">
+  <blockquote>
+    <p>{{ t.quote }}</p>
+  </blockquote>
+  <figcaption>
+    <span class="t-name">{{ t.name }}</span>{% if t.town != "" %}<span class="t-town">, {{ t.town }}</span>{% endif %}
+    <span class="t-source">Review on {{ t.source }}</span>
+  </figcaption>
+</figure>

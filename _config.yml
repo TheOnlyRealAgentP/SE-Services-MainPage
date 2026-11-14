@@ -1,0 +1,46 @@
+# Site-wide settings. Business details (phone, address, hours, towns,
+# licenses) live in _data/business.yml, not here.
+
+title: Stewart Engineering Services
+description: >-
+  Septic and aerobic system installation, maintenance and repair, plus civil
+  engineering for builders and developers in Channelview and east Harris County, TX.
+url: "https://stewartengineeringservices.com"
+baseurl: ""
+lang: en_US
+
+# Used by jekyll-seo-tag for Open Graph / social cards.
+logo: /assets/img/logo.png
+social:
+  name: Stewart Engineering Services
+  links:
+    - https://www.facebook.com/StewartAerobic
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: /assets/img/og-image.jpg
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+# Files that are part of the repo but not part of the website.
+exclude:
+  - README.md
+  - DEPLOY.md
+  - LAUNCH-CHECKLIST.md
+  - TODO.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts
+  - .bundle
+  - .gitignore

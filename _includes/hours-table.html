@@ -1,0 +1,9 @@
+{%- assign b = site.data.business -%}
+<table class="hours">
+  <caption class="visually-hidden">Office hours</caption>
+  <tbody>
+    {%- for h in b.hours %}
+    <tr><th scope="row">{{ h.label }}</th><td>{{ h.display }}</td></tr>
+    {%- endfor %}
+  </tbody>
+</table>

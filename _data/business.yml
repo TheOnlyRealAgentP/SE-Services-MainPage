@@ -1,0 +1,129 @@
+# ---------------------------------------------------------------------------
+# THE one place for business details. The header, footer, contact page,
+# service-area page and the Google structured data (JSON-LD) all read from
+# this file. Change a value here and it changes everywhere.
+#
+# A blank value ("") shows up on the site as a yellow "TODO" marker until you
+# fill it in. See TODO.md for the full list.
+# ---------------------------------------------------------------------------
+
+name: Stewart Engineering Services
+url: https://stewartengineeringservices.com
+founded_note: 50+ years of engineering experience
+
+phone: (281) 862-9769
+phone_href: "+12818629769"
+email: info@aerobicservice.com
+
+address:
+  street: 16531 Shady Lane
+  city: Channelview
+  region: TX
+  region_name: Texas
+  postal_code: "77530"
+  country: US
+
+# Map pin coordinates for Google. Leave blank until confirmed
+# (right-click the office pin in Google Maps to copy them).
+geo:
+  latitude: ""
+  longitude: ""
+
+# Link that opens directions in Google Maps (no API key needed).
+maps_url: https://www.google.com/maps/search/?api=1&query=16531+Shady+Lane%2C+Channelview%2C+TX+77530
+maps_embed: https://www.google.com/maps?q=16531+Shady+Lane,+Channelview,+TX+77530&output=embed
+
+# Opening hours. "days" uses schema.org day names; "label" is what people see.
+hours:
+  - label: Monday – Thursday
+    days: [Monday, Tuesday, Wednesday, Thursday]
+    opens: "09:00"
+    closes: "17:00"
+    display: 9 am – 5 pm
+  - label: Friday
+    days: [Friday]
+    opens: "09:00"
+    closes: "15:00"
+    display: 9 am – 3 pm
+  - label: Saturday – Sunday
+    days: []
+    display: Closed
+# Compact version for the phone bar at the top of the page on mobile.
+hours_short: Mon–Thu 9–5 · Fri 9–3
+
+# Owner shown on the About page.
+owner:
+  name: ""
+  title: ""
+
+# License / registration numbers. Leave "number" blank until confirmed.
+# "short" is the compact label used in the trust strip near the top of
+# pages; set trust: true on the ones that should appear there.
+licenses:
+  - label: TCEQ On-Site Sewage Facility (OSSF) installer license
+    short: TCEQ OSSF installer
+    number: ""
+    trust: true
+  - label: TCEQ OSSF maintenance provider registration
+    short: TCEQ maintenance provider
+    number: ""
+  - label: Texas Professional Engineer (PE) license
+    short: Texas PE
+    number: ""
+  - label: TBPELS engineering firm registration
+    short: TBPELS firm
+    number: ""
+    trust: true
+
+# Contact form. Works with Formspree or Web3Forms:
+#  - Formspree: set action to https://formspree.io/f/XXXXXXX, leave access_key blank.
+#  - Web3Forms: set action to https://api.web3forms.com/submit and paste your access key.
+form:
+  action: ""
+  access_key: ""
+
+social:
+  facebook: https://www.facebook.com/StewartAerobic
+  google_business: ""          # your Google Business Profile URL
+  google_review_link: ""       # the "Ask for reviews" link from Google Business Profile
+
+# Only fill these in once there is a real, linkable rating (e.g. Google).
+# Until then no stars are shown anywhere.
+rating:
+  value: ""
+  count: ""
+  source_url: ""
+
+# Towns served, in the order they're listed on the site. Used by the contact
+# form's town dropdown, the trust strip and the JSON-LD "areaServed".
+# "slug" must match the section id for that town on service-area.html,
+# which is also where each town's paragraph lives.
+service_area_summary: Harris County and surrounding communities
+towns:
+  - name: Channelview
+    slug: channelview
+    county: Harris County
+  - name: Baytown
+    slug: baytown
+    county: Harris and Chambers counties
+  - name: Crosby
+    slug: crosby
+    county: Harris County
+  - name: Highlands
+    slug: highlands
+    county: Harris County
+  - name: Huffman
+    slug: huffman
+    county: Harris County
+  - name: Mont Belvieu
+    slug: mont-belvieu
+    county: Chambers County
+  - name: Deer Park
+    slug: deer-park
+    county: Harris County
+  - name: La Porte
+    slug: la-porte
+    county: Harris County
+  - name: Pasadena
+    slug: pasadena
+    county: Harris County
