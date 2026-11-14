@@ -837,3 +837,13 @@ html:not(.js) .reviews-controls { display: none; }
   .am-shield { display: none; }
   .am-dot { transform: scale(1.4); }
 }
+
+/* "Outside these communities?" note */
+.area-note {
+  margin-top: var(--s-3); padding: var(--s-3); background: var(--white);
+  border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--radius);
+}
+.area-note h3 { font-size: 1.25rem; margin-bottom: var(--s-1); }
+.area-note p { color: var(--text); }
+.area-note-actions { display: flex; flex-wrap: wrap; gap: var(--s-1); margin: var(--s-2) 0 0; }
+@media (max-width: 479px) { .area-note-actions .btn { width: 100%; } }

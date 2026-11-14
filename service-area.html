@@ -5,7 +5,7 @@ permalink: /service-area
 side: both
 eyebrow: Service area
 h1: Septic & Engineering Service Area in East Harris County
-lede: We serve East Harris County and the surrounding communities from our office in Channelview. If your community is not listed, please call; we may still be able to assist.
+lede: We serve East Harris County and the surrounding communities from our office in Channelview, and most of the Greater Houston area by arrangement.
 ---
 {%- assign b = site.data.business -%}
 {%- comment -%}
@@ -24,6 +24,7 @@ lede: We serve East Harris County and the surrounding communities from our offic
         {%- endfor %}
       </ul>
       <p class="map-link"><a href="{{ b.maps_url }}" rel="noopener">{% include icon.html name="pin" %} Directions to our office in Google Maps</a></p>
+      {% include area-note.html id="area" %}
     </div>
     <div>
       {% include area-map.html prefix="" id="area" %}

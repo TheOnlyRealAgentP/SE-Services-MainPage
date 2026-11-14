@@ -99,6 +99,12 @@ rating:
 # "slug" must match the section id for that town on service-area.html,
 # which is also where each town's paragraph lives.
 service_area_summary: Harris County and surrounding communities
+# Shown in the "Outside these communities?" note on the home page and
+# /service-area (the FAQ on /faqs repeats it in its own words).
+extended_area_note: >-
+  We can serve most of the Greater Houston area, as far as Tomball to the
+  northwest and Anahuac to the east. Because service outside our core area is
+  confirmed case by case, please call or email us for a definite answer.
 towns:
   - name: Channelview
     slug: channelview

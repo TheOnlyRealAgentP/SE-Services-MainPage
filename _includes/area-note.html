@@ -1,0 +1,10 @@
+{%- comment -%} "Outside these communities?" note. Text lives in _data/business.yml (extended_area_note). {%- endcomment -%}
+{%- assign b = site.data.business -%}
+<aside class="area-note" aria-labelledby="area-note-{{ include.id | default: 'a' }}">
+  <h3 id="area-note-{{ include.id | default: 'a' }}">Outside these communities?</h3>
+  <p>{{ b.extended_area_note }}</p>
+  <p class="area-note-actions">
+    <a class="btn btn-primary" href="tel:{{ b.phone_href }}">{% include icon.html name="phone" %} Call {{ b.phone }}</a>
+    <a class="btn btn-secondary" href="mailto:{{ b.email }}?subject=Service%20area%20question">{% include icon.html name="mail" %} Email us</a>
+  </p>
+</aside>
