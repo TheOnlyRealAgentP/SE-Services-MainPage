@@ -1,0 +1,63 @@
+---
+title: Aerobic Septic FAQ, Houston
+description: "Answers for east Harris County homeowners about aerobic and septic systems: pumping, alarms, maintenance contracts, chlorine and what not to flush."
+permalink: /faqs
+side: septic
+quote_service: maintenance
+eyebrow: Homeowner FAQ
+h1: Aerobic & Septic System FAQ
+lede: Straight answers to the questions homeowners ask us most. Don't see yours? Call us during office hours.
+faqs:
+  - q: How often should my septic tanks be pumped?
+    a: We generally recommend every two to three years. If the system gets more water than it was designed for, from frequent guests, heavy laundry days or more people in the house, it may need pumping more often.
+  - q: Do I need a maintenance contract for my aerobic system?
+    a: For most aerobic systems, yes. Texas rules require a maintenance contract, and the contract must be on file with your county. Regular inspections also catch problems while they're still small. For systems in Harris County, we file the inspection reports for you. See our [maintenance contracts](/maintenance).
+    todo: verify against current TCEQ rules (30 TAC Chapter 285) and Harris County requirements
+  - q: Can I maintain my own aerobic system?
+    a: In some cases. A homeowner who completes the state-required training and certification can inspect their own system and report the results to the county. Everyone else needs a contract with a licensed maintenance provider.
+    todo: verify current TCEQ homeowner self-maintenance rules and which counties allow it
+  - q: What should I do if the alarm goes off?
+    a: Check the breaker for the septic system first to make sure the control panel has power. If the breaker hasn't tripped, or trips again after you reset it, call us. Until it's fixed, cut back on water use such as laundry, the dishwasher and long showers.
+  - q: Is my system supposed to run all the time?
+    a: The air compressor, yes. It's designed to run continuously to keep the treatment tank supplied with air. The sprinkler pump only runs when the pump tank is full. If the sprinklers barely spray while it's running, there may be a break in the sprinkler line or the pump may be running dry.
+  - q: Who keeps the chlorine stocked?
+    a: If your system has a chlorinator, keeping it stocked between inspections is usually the homeowner's job. Use only tablets made for wastewater systems, not pool tablets. We check the chlorinator at every inspection and can tell you which tablets to buy.
+    todo: verify chlorine tablet rules and homeowner responsibilities under current TCEQ rules
+  - q: What shouldn't go down the drain?
+    a: "Keep these out of the system: cooking grease and oil; wipes (even \"flushable\" ones), paper towels and feminine products; paint, solvents and pesticides; large amounts of bleach or harsh drain cleaners; and leftover medications. Go easy on the garbage disposal, too."
+  - q: Why is part of my yard always wet?
+    a: Common causes are a broken sprinkler line, a pump that runs too often because of a leak inside the house (a running toilet adds a lot of water), or a system getting more water than it was designed for. Call us and we'll find the cause.
+  - q: Can I drive, park or build over my system?
+    a: No. Keep vehicles and heavy equipment off the tanks and lines, and don't build, pave or put a pool over any part of the system. Leave the spray area open so the sprinklers can reach it.
+  - q: Do you serve my area?
+    a: We serve Channelview, Baytown, Crosby, Highlands, Huffman, Mont Belvieu, Deer Park, La Porte, Pasadena and the surrounding areas of east Harris County. See our [service area](/service-area).
+---
+<section class="section" aria-labelledby="faq-list-heading">
+  <div class="container faq-grid">
+    <div>
+      <h2 id="faq-list-heading" class="visually-hidden">Questions and answers</h2>
+      <div class="faq">
+        {%- for f in page.faqs %}
+        <details>
+          <summary>{{ f.q }}</summary>
+          <div class="faq-a">
+            {{ f.a | markdownify }}
+            {%- if f.todo %}<p>{% include todo.html t=f.todo %}</p>{% endif %}
+          </div>
+        </details>
+        {%- endfor %}
+      </div>
+    </div>
+    <aside aria-labelledby="faq-help">
+      <div class="card">
+        <h2 id="faq-help" class="h3-size">Need a hand now?</h2>
+        <p>Our technicians can inspect, repair or pump your system, or set you up with a maintenance contract.</p>
+        <ul class="check-list">
+          <li>{% include icon.html name="check" %}<span><a href="/maintenance">Maintenance contracts</a></span></li>
+          <li>{% include icon.html name="check" %}<span><a href="/services-repairs">Repairs &amp; pumping</a></span></li>
+          <li>{% include icon.html name="check" %}<span><a href="/installation">New installations</a></span></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>

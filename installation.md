@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Septic Installation, Houston
-description: Aerobic and conventional septic installation in Channelview, Baytown, Crosby and east Harris County, handled from survey and design through permit and inspection.
+description: Aerobic and conventional septic installation in Channelview, Baytown, Crosby and east Harris County, from survey and design to permit and inspection.
 permalink: /installation
 side: septic
 service_id: installation

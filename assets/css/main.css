@@ -411,7 +411,7 @@ mark.todo {
 .info-list { list-style: none; padding: 0; margin: 0 0 var(--s-4); display: grid; gap: var(--s-3); }
 .info-list li { display: flex; gap: var(--s-2); }
 .info-list .icon { flex: none; color: var(--accent); margin-top: 3px; }
-.info-list h2 { font-size: var(--fs-md); margin-bottom: 4px; }
+.info-list h2, .info-list h3 { font-size: var(--fs-md); margin-bottom: 4px; }
 .info-list p { margin: 0; }
 .hours { border-collapse: collapse; width: 100%; }
 .hours th, .hours td { text-align: left; padding: 4px 0; font-weight: 400; vertical-align: top; }
@@ -504,3 +504,5 @@ mark.todo {
 .two-col-center { align-items: center; }
 .after-list { margin-top: var(--s-3); }
 .prose-section + .section { padding-top: 0; }
+.h3-size { font-size: var(--fs-h3); }
+.card .check-list { margin: var(--s-2) 0 0; }

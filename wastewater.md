@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Wastewater Design, Houston TX
-description: Water and wastewater engineering in Harris County for homes, businesses and developments without city sewer, covering on-site system design, sizing and permits.
+description: "Water and wastewater engineering in Harris County for homes, businesses and developments without city sewer: on-site system design, sizing and permits."
 permalink: /wastewater
 side: engineering
 service_id: wastewater

@@ -1,0 +1,20 @@
+---
+title: Page Not Found
+description: The page you were looking for isn't here. Find septic and engineering services from Stewart Engineering Services, or give us a call.
+permalink: /404.html
+sitemap: false
+side: both
+---
+{%- assign b = site.data.business -%}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Error 404</p>
+    <h1>Sorry, we can't find that page</h1>
+    <p class="lede">The page may have moved when we combined our two websites. Pick the kind of help you need below, or call us at <a href="tel:{{ b.phone_href }}">{{ b.phone }}</a>.</p>
+    <div class="notfound-actions">
+      <a class="btn btn-primary btn-lg" href="/services#septic">Septic &amp; aerobic services</a>
+      <a class="btn btn-secondary btn-lg" href="/engineering/">Engineering services</a>
+    </div>
+    <p class="after-list"><a href="/">Home</a> · <a href="/service-area">Service area</a> · <a href="/faqs">Homeowner FAQ</a> · <a href="/contact">Contact</a></p>
+  </div>
+</section>

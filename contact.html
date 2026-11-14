@@ -1,0 +1,54 @@
+---
+title: Contact Us, Channelview, TX
+description: Request a quote or call Stewart Engineering Services in Channelview, TX, for septic service, a maintenance contract or an engineering consultation.
+permalink: /contact
+side: both
+cta: false
+eyebrow: Contact
+h1: Contact Us or Request a Quote
+lede: The fastest way to reach us is a phone call during office hours. You can also send the form below and we'll get back to you.
+---
+{%- assign b = site.data.business -%}
+<section class="section" aria-label="Contact form and office details">
+  <div class="container contact-grid">
+    <div>
+      <h2>Request a quote</h2>
+      {% include contact-form.html %}
+    </div>
+
+    <div>
+      <h2 class="visually-hidden">Office details</h2>
+      <ul class="info-list">
+        <li>
+          {% include icon.html name="phone" %}
+          <div>
+            <h3>Phone</h3>
+            <p><a class="big-phone" href="tel:{{ b.phone_href }}">{{ b.phone }}</a></p>
+          </div>
+        </li>
+        <li>
+          {% include icon.html name="mail" %}
+          <div>
+            <h3>Email</h3>
+            <p><a href="mailto:{{ b.email }}">{{ b.email }}</a></p>
+          </div>
+        </li>
+        <li>
+          {% include icon.html name="pin" %}
+          <div>
+            <h3>Office</h3>
+            <address>{{ b.name }}<br>{{ b.address.street }}<br>{{ b.address.city }}, {{ b.address.region }} {{ b.address.postal_code }}</address>
+          </div>
+        </li>
+        <li>
+          {% include icon.html name="clock" %}
+          <div>
+            <h3>Hours</h3>
+            {% include hours-table.html %}
+          </div>
+        </li>
+      </ul>
+      {% include map.html %}
+    </div>
+  </div>
+</section>

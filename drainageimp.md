@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Drainage Engineering, Houston
-description: Drainage engineering in Channelview and Harris County, including site drainage and detention, floodplain analysis, SWPPPs and storm water quality plan renewals.
+description: "Drainage engineering in Channelview and Harris County: site drainage and detention, floodplain analysis, SWPPPs and storm water quality plan renewals."
 permalink: /drainageimp
 side: engineering
 service_id: drainageimp

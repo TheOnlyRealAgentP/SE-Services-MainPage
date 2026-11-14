@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Land Development, Houston TX
-description: Land development engineering in Houston and Harris County. Site plans for lots, roads, utilities and drainage on residential, commercial and industrial tracts.
+description: "Land development engineering in Houston and Harris County: site plans for lots, roads, utilities and drainage on residential and commercial tracts."
 permalink: /land-development
 side: engineering
 service_id: land-development

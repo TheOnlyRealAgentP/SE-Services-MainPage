@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Septic Repair in Houston, TX
-description: Septic and aerobic repair in east Harris County, covering alarms, failed air pumps, sprinkler problems and pump-outs. We find the cause and quote it in writing first.
+description: "Septic and aerobic repair in east Harris County: alarms, air pumps, sprinkler problems and pump-outs. We find the cause and quote it in writing first."
 permalink: /services-repairs
 side: septic
 service_id: services-repairs
