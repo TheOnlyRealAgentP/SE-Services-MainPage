@@ -1,3 +1,10 @@
+{%- comment -%}
+  Pages and includes write internal links as "/path". The whole page is
+  captured here, and if the site is served from a sub-path (the github.io
+  preview), that prefix is added to every internal href/src/srcset. On the
+  custom domain baseurl is empty and nothing changes.
+{%- endcomment -%}
+{%- capture html -%}
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,3 +21,15 @@
 {% include sticky-bar.html %}
 </body>
 </html>
+{%- endcapture -%}
+{%- assign base = site.baseurl | default: "" -%}
+{%- if base != "" and base != "/" -%}
+  {%- assign wrong_canonical = site.url | append: base -%}
+  {%- assign html = html | replace: wrong_canonical, site.url
+      | replace: 'href="/', 'href="__BASE__/'
+      | replace: 'src="/', 'src="__BASE__/'
+      | replace: 'srcset="/', 'srcset="__BASE__/'
+      | replace: ', /assets/', ', __BASE__/assets/'
+      | replace: '__BASE__', base -%}
+{%- endif -%}
+{{ html }}

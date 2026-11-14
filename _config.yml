@@ -5,8 +5,13 @@ title: Stewart Engineering Services
 description: >-
   Septic and aerobic system installation, maintenance and repair, plus civil
   engineering for builders and developers in Channelview and east Harris County, TX.
+# Canonical address. Canonical links, the sitemap and Google's structured
+# data always point here, even while the site is previewed on github.io.
 url: "https://stewartengineeringservices.com"
-baseurl: ""
+# "baseurl" is deliberately NOT set. GitHub Pages fills it in automatically:
+# "/SE-Services-MainPage" while the site is served from
+# theonlyrealagentp.github.io/SE-Services-MainPage/, and empty once the
+# custom domain is connected. The default layout adds it to every link.
 lang: en_US
 
 # Used by jekyll-seo-tag for Open Graph / social cards.
