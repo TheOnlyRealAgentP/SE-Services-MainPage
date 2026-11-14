@@ -135,6 +135,10 @@ within a minute. Domain setup is in the local `DEPLOY.md`, which is not committe
 - About 100 lines of JavaScript in `assets/js/main.js`: the mobile menu and
   the contact form. The site works without it.
 - No trackers or analytics. Headings use Barlow, self-hosted in `assets/fonts/` (SIL Open Font License); body text uses the system font.
+- Header background map: `assets/img/harris-contours.svg`, real Harris
+  County elevation contours (every 10 ft, heavier every 50 ft) inside the
+  county line. Built from AWS Terrain Tiles (USGS NED and SRTM, public
+  domain) and the U.S. Census TIGER county boundary.
 - Logo: `assets/img/logo.svg` (and `logo-reversed.svg` for dark
   backgrounds), rebuilt as a vector from the original Stewart Engineering
   logo.
