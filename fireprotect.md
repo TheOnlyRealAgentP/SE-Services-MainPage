@@ -6,39 +6,39 @@ permalink: /fireprotect
 side: engineering
 service_id: fireprotect
 service_type: Fire protection engineering
-h1: Fire Protection Engineering & Red Tag Help in Harris County
-lede: A red tag from the fire marshal can keep a business from opening or a building from being used. We work out what the fire marshal needs, prepare the plans and documents, and follow the corrections through with you.
+h1: Fire Protection Engineering & Red Tag Resolution in Harris County
+lede: A red tag from the fire marshal can prevent a business from opening or a building from being occupied. We identify what the fire marshal requires, prepare the necessary plans and documentation, and work with you through each correction.
 cta_label: Request a project consultation
 quote_service: fireprotect
 placeholder: a commercial building or fire protection plan set
 testimonial: michael-c
 who:
-  - Business owners who got a red tag or correction notice from the fire marshal
+  - Business owners who have received a red tag or correction notice from the fire marshal
   - Owners opening a new business in an existing building
   - Builders and developers of commercial buildings
   - Property managers preparing for a fire marshal inspection
 included:
-  - A review of the red tag or inspection report and exactly what it requires
+  - A review of the red tag or inspection report and its specific requirements
   - 'Fire protection plans for submittal to the fire marshal <mark class="todo">TODO: confirm scope, e.g. sprinkler/alarm design vs. site fire protection plans</mark>'
   - Fire department access, fire lanes and hydrant locations on site plans
-  - Coordination with the fire marshal's office until the plans are approved
-  - Code review when the question is broader than one system (see [fire code standards](/firecode))
+  - Coordination with the fire marshal's office through plan approval
+  - Code review when the issue extends beyond a single system (see [fire code standards](/firecode))
 steps:
-  - title: Send the paperwork
-    text: The red tag, inspection report or plan review comments, plus the property address.
+  - title: Share the documents
+    text: Send us the red tag, inspection report or plan review comments, along with the property address.
   - title: Review
-    text: We work out exactly what the fire marshal is asking for and what it will take.
-  - title: Plans and documents
-    text: We prepare the plans, calculations or letters the corrections call for.
-  - title: Resubmit and follow through
-    text: We submit and handle comments until the plans are approved.
+    text: We determine exactly what the fire marshal requires and what it will take to comply.
+  - title: Plans and documentation
+    text: We prepare the plans, calculations or letters required for the corrections.
+  - title: Resubmittal
+    text: We submit the documents and respond to comments through approval.
 faqs:
   - q: What is a red tag?
-    a: A red tag is a notice from the fire marshal that a building or a fire protection system doesn't meet code. Depending on the problem, it can stop a business from opening, or a building from being occupied, until it's corrected.
+    a: A red tag is a notice from the fire marshal that a building or fire protection system does not meet code. Depending on the issue, it can prevent a business from opening or a building from being occupied until the deficiency is corrected.
     todo: verify wording against Harris County Fire Marshal's Office practice
   - q: How quickly can you help?
-    a: Call as soon as you get the notice. How long it takes depends on what the fire marshal needs, and we'll give you a timeline once we've seen the paperwork.
+    a: Contact us as soon as you receive the notice. The timeline depends on the fire marshal's requirements, and we will provide one after reviewing your documents.
   - q: Which fire marshal's offices do you work with?
-    a: We prepare plans and documents for the Harris County Fire Marshal's Office and for fire officials in the cities we serve.
+    a: We prepare plans and documentation for the Harris County Fire Marshal's Office and for fire officials in the cities we serve.
     todo: confirm which fire marshal offices you regularly submit to
 ---

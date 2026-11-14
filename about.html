@@ -5,19 +5,19 @@ permalink: /about
 side: both
 eyebrow: About us
 h1: About Stewart Engineering Services
-lede: A family business in Channelview that does two kinds of work, septic systems for homeowners and civil engineering for builders and developers, both backed by 50+ years of engineering experience.
+lede: A family-owned firm in Channelview providing septic and aerobic services for homeowners and civil engineering for builders and developers, backed by more than 50 years of engineering experience.
 ---
 {%- assign b = site.data.business -%}
 <section class="section" aria-labelledby="story-heading">
   <div class="container two-col">
     <div class="prose">
-      <h2 id="story-heading">Our story</h2>
+      <h2 id="story-heading" class="rule">Our story</h2>
       {%- if site.show_todos %}
       <p>{% include todo.html t="founding story: who started the company, when, and how the septic side and the engineering side came together" %}</p>
       {%- endif %}
-      <p>We do two kinds of work that have more in common than you'd think. Homeowners call us when a septic or aerobic system needs installing, inspecting or fixing. Builders, developers and business owners call us when land needs to be planned, platted, drained or brought up to fire code. Both come down to the same thing: an engineered plan that works on the ground and gets approved.</p>
-      <h2>One name, one website</h2>
-      <p>You may know us as <strong>AIMS</strong> or <strong>Stewart Aerobic</strong> from aerobicservice.com, or as <strong>Stewart Engineering</strong> from se.services. It's the same family, the same office on {{ b.address.street }} and the same phone number, now under one name: {{ b.name }}.</p>
+      <p>Our work spans two closely related disciplines. Homeowners rely on us to install, inspect and repair septic and aerobic systems. Builders, developers and business owners rely on us to plan, plat, drain and permit their properties and to bring buildings into fire code compliance. Both require sound engineering that performs in the field and meets regulatory requirements.</p>
+      <h2>One company, one name</h2>
+      <p>You may know us as <strong>AIMS</strong> or <strong>Stewart Aerobic</strong> through aerobicservice.com, or as <strong>Stewart Engineering</strong> through se.services. We are the same family-owned company, with the same office at {{ b.address.street }} and the same phone number, now operating under one name: {{ b.name }}.</p>
     </div>
     <div>
       {% include picture.html name="tank-hookup-trench" sizes="(min-width: 768px) 46vw, 100vw" %}
@@ -67,15 +67,15 @@ lede: A family business in Channelview that does two kinds of work, septic syste
 <section class="section" aria-labelledby="expect-heading">
   <div class="container">
     <div class="section-head">
-      <h2 id="expect-heading">What you can expect from us</h2>
+      <h2 id="expect-heading">Our commitment to you</h2>
     </div>
     <ul class="card-grid card-grid-3">
-      <li class="card"><h3>An inspection before a diagnosis</h3><p>We look at the whole system, including the tanks, equipment and disposal area, before we tell you what's wrong.</p></li>
-      <li class="card"><h3>Options and a written estimate</h3><p>We explain what we found, give you options that fit your budget, and put the price in writing before work starts.</p></li>
-      <li class="card"><h3>Quality parts, proven methods</h3><p>We use good parts and installation methods that hold up, so you aren't calling us back for the same problem.</p></li>
-      <li class="card"><h3>Prompt repairs</h3><p>We know a system that's down disrupts the whole household, so we work to get it running again quickly.</p></li>
-      <li class="card"><h3>A clean job site</h3><p>We keep the work area organized and leave your property clean when the job is done.</p></li>
-      <li class="card"><h3>Engineers on staff</h3><p>When a problem needs more than a part swap, the people designing the fix are licensed engineers.</p></li>
+      <li class="card"><h3>Inspection before diagnosis</h3><p>We inspect the entire system, including the tanks, equipment and disposal area, before making a diagnosis.</p></li>
+      <li class="card"><h3>Options and a written estimate</h3><p>We explain our findings, present options to fit your budget and provide pricing in writing before work begins.</p></li>
+      <li class="card"><h3>Quality parts and proven methods</h3><p>We use quality parts and proven installation methods that deliver lasting results.</p></li>
+      <li class="card"><h3>Prompt service</h3><p>We understand that a system outage disrupts your household, and we work to restore service quickly.</p></li>
+      <li class="card"><h3>A clean job site</h3><p>We keep the work area organized and leave your property clean when the job is complete.</p></li>
+      <li class="card"><h3>Licensed engineers on staff</h3><p>When a problem requires more than a replacement part, licensed engineers design the solution.</p></li>
     </ul>
   </div>
 </section>
@@ -83,7 +83,7 @@ lede: A family business in Channelview that does two kinds of work, septic syste
 <section class="section section-alt" aria-labelledby="reviews-heading">
   <div class="container">
     <div class="section-head">
-      <h2 id="reviews-heading">What customers say</h2>
+      <h2 id="reviews-heading">What our customers say</h2>
     </div>
     <div class="testimonials">
       {%- for t in site.data.testimonials %}

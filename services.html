@@ -5,7 +5,7 @@ permalink: /services
 side: both
 eyebrow: Everything we do
 h1: Septic, Aerobic & Engineering Services
-lede: Two kinds of work from one family business in Channelview. Pick the side that fits your project, or call and we'll point you in the right direction.
+lede: From our office in Channelview, we serve homeowners who need septic and aerobic services and builders and developers who need civil engineering. Select a category below, or call our office and we will direct you to the right service.
 ---
 {%- assign septic = site.data.services | where: "side", "septic" -%}
 {%- assign eng = site.data.services | where: "side", "engineering" -%}
@@ -14,14 +14,11 @@ lede: Two kinds of work from one family business in Channelview. Pick the side t
     <div class="section-head">
       <p class="eyebrow">For homeowners</p>
       <h2 id="septic-heading">Septic &amp; Aerobic Services</h2>
-      <p>Installation, maintenance contracts and repairs for residential and commercial on-site systems. Common questions are answered in our <a href="/faqs">homeowner FAQ</a>.</p>
+      <p>Installation, maintenance contracts and repairs for residential and commercial on-site systems. Answers to common questions are available in our <a href="/faqs">homeowner FAQ</a>.</p>
     </div>
     <ul class="card-grid card-grid-3">
       {%- for s in septic %}
-      <li class="card link-card">
-        <h3><a href="{{ s.url }}">{{ s.title }}</a></h3>
-        <p>{{ s.summary }}</p>
-      </li>
+      {% include service-card.html id=s.id %}
       {%- endfor %}
     </ul>
   </div>
@@ -32,14 +29,11 @@ lede: Two kinds of work from one family business in Channelview. Pick the side t
     <div class="section-head">
       <p class="eyebrow">For builders &amp; developers</p>
       <h2 id="eng-heading">Engineering Services</h2>
-      <p>Planning, design and approvals for residential, commercial and industrial property. See the <a href="/engineering/">engineering overview</a> for how projects work.</p>
+      <p>Planning, design and approvals for residential, commercial and industrial property. Visit the <a href="/engineering/">engineering overview</a> to learn how we manage projects.</p>
     </div>
     <ul class="card-grid card-grid-3">
       {%- for s in eng %}
-      <li class="card link-card">
-        <h3><a href="{{ s.url }}">{{ s.title }}</a></h3>
-        <p>{{ s.summary }}</p>
-      </li>
+      {% include service-card.html id=s.id %}
       {%- endfor %}
     </ul>
   </div>

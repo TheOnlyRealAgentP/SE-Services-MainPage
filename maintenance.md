@@ -7,51 +7,51 @@ side: septic
 service_id: maintenance
 service_type: Aerobic septic system maintenance
 h1: Aerobic Septic Maintenance Contracts in East Harris County
-lede: We inspect your aerobic system every four months, give you a written report after each visit, and fix what we find before it turns into a backup or an expensive repair.
+lede: We inspect your aerobic system every four months, provide a written report after each visit, and identify problems early, before they lead to a backup or a costly repair.
 cta_label: Start a maintenance contract
 quote_service: maintenance
 photo: aerobic-system-lawn
 testimonial: kathy-b
 who:
-  - Homeowners with an aerobic treatment system, the kind with sprinkler heads or a spray area in the yard
-  - New owners of a home with an aerobic system who want a contract in their own name
-  - Anyone whose current provider stopped showing up or dropped their contract
-  - Businesses, churches and other commercial sites with an on-site aerobic system
+  - Homeowners with an aerobic treatment system, typically identified by sprinkler heads or a spray area in the yard
+  - New homeowners who need a maintenance contract in their own name
+  - Property owners whose current provider is no longer servicing their system
+  - Businesses, churches and other commercial properties with an on-site aerobic system
 included:
-  - An inspection every four months, three visits a year
-  - A written report after every visit, so you know what we checked and what we found
-  - 'We file your inspection reports with Harris County for you <mark class="todo">TODO: confirm whether we also file for Chambers County customers (Mont Belvieu, east Baytown)</mark>'
-  - Repairs and replacement parts when needed, quoted separately and in writing before any work starts
-  - One number to call when the alarm goes off between visits
+  - An inspection every four months, for a total of three visits per year
+  - A written report after every visit documenting what was inspected and any findings
+  - 'Filing of your inspection reports with Harris County <mark class="todo">TODO: confirm whether we also file for Chambers County customers (Mont Belvieu, east Baytown)</mark>'
+  - Repairs and replacement parts as needed, quoted separately and in writing before any work begins
+  - A direct line to our office if your alarm sounds between visits
 process_heading: How a maintenance contract works
 steps:
-  - title: Get in touch
-    text: Call or send a request with your address and, if you know it, the brand of your system.
-  - title: First visit
-    text: We set up the contract and inspect the system so we know where it stands from day one.
-  - title: Every four months
-    text: A technician checks the system's equipment, alarm, disinfection and spray heads.
+  - title: Contact us
+    text: Call or submit a request with your property address and, if known, the make of your system.
+  - title: Initial inspection
+    text: We set up your contract and inspect the system to establish its current condition.
+  - title: Scheduled inspections
+    text: Every four months, a technician checks the system's equipment, alarm, disinfection and spray heads.
   - title: Written report
-    text: You get a report after every visit, and for Harris County systems we file it with the county.
-  - title: Repairs when needed
-    text: If something needs fixing, we explain it and quote the repair and parts separately, in writing, before any work starts.
+    text: You receive a report after each visit. For systems in Harris County, we file it with the county on your behalf.
+  - title: Repairs as needed
+    text: If a repair is needed, we explain the issue and provide a separate written quote for labor and parts before any work begins.
 faqs:
   - q: Is a maintenance contract required in Texas?
-    a: For most aerobic systems, yes. Texas rules require an aerobic system to be covered by a maintenance contract that is kept on file with the county. For systems in Harris County, we file the inspection reports for you. Some homeowners can maintain their own system instead, but only after getting the required training and certification.
+    a: For most aerobic systems, yes. Texas rules require aerobic systems to be covered by a maintenance contract kept on file with the county. For systems in Harris County, we file the inspection reports for you. Homeowners may maintain their own system only after completing the required training and certification.
     todo: verify against current TCEQ rules (30 TAC Chapter 285) and Harris County requirements
-  - q: What do you check at each inspection?
-    a: We make sure the air compressor (aerator) is running and moving air, test the pumps and the alarm, check the disinfection unit for chlorine, and watch the sprinkler heads run. We also check the tanks and tell you when they need pumping.
+  - q: What do you check during each inspection?
+    a: We confirm that the air compressor (aerator) is operating properly, test the pumps and alarm, check the disinfection unit for chlorine and observe the sprinkler heads in operation. We also check the tanks and let you know when pumping is needed.
     todo: confirm this matches the technicians' actual checklist
-  - q: What should I do if the alarm goes off between visits?
-    a: Check the breaker for the septic system first. If it hasn't tripped, call us, and cut back on water use (laundry, the dishwasher, long showers) until we find the problem.
+  - q: What should I do if my alarm sounds between visits?
+    a: First, check the breaker for the septic system. If it has not tripped, call our office and limit water use, such as laundry, dishwashing and long showers, until the system has been inspected.
   - q: How much does a maintenance contract cost?
-    a: It depends on the type of system and the property. Call our office or send a request and we'll give you a price for your system. The contract covers the inspections and reports. Repairs and parts are quoted separately, so there are no surprises.
+    a: Pricing depends on the type of system and the property. Call our office or submit a request for a quote. The contract covers the scheduled inspections and reports; repairs and parts are quoted separately so there are no surprises.
     todo: add a typical price or range if you want to publish one
-  - q: Can I switch to you from another company?
-    a: Yes. Call or send a request with your address and when your current contract ends, and we'll walk you through switching.
+  - q: Can I switch to your company from another provider?
+    a: Yes. Contact us with your property address and the end date of your current contract, and we will guide you through the transfer.
 ---
-## Why a contract beats waiting for a problem
+## Why a maintenance contract is worth it
 
-An aerobic system has moving parts: an air pump, a sprinkler pump, an alarm and a disinfection unit. When one of them quits, wastewater usually keeps flowing but stops getting treated properly. Often nobody notices until there's a smell, the alarm sounds or part of the yard stays wet.
+An aerobic system relies on several mechanical components: an air compressor, a sprinkler pump, an alarm and a disinfection unit. When one of them fails, wastewater usually continues to flow but is no longer treated properly. The problem often goes unnoticed until there is an odor, the alarm sounds or part of the yard stays wet.
 
-Regular inspections catch worn parts early, while they're still cheap to replace, and keep the system working the way it was designed. With a contract, you don't have to remember when the next inspection is due, because we keep track of it.
+Regular inspections identify worn components early, while they are still inexpensive to replace, and keep the system operating as designed. With a contract in place, we track the inspection schedule for you.

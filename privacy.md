@@ -3,7 +3,7 @@ title: Privacy Policy
 description: How Stewart Engineering Services handles the information you send through this website. No tracking, no ads, and we don't sell your information.
 permalink: /privacy
 h1: Privacy Policy
-lede: "Short version: we only collect what you choose to send us, we use it to answer you, and we don't sell it."
+lede: We collect only the information you choose to send us, use it to respond to you, and never sell it.
 ---
 <section class="section">
 <div class="container">

@@ -10,7 +10,7 @@
   title: Septic & Aerobic Installation
   short: Installation
   url: /installation
-  summary: New residential and commercial aerobic and conventional septic systems, from site survey and design through permit, install and final inspection.
+  summary: New residential and commercial aerobic and conventional septic systems, from site survey and design through permitting, installation and final inspection.
   related: [maintenance, wastewater, platting]
 
 - id: maintenance
@@ -18,7 +18,7 @@
   title: Aerobic Maintenance Contracts
   short: Maintenance Contracts
   url: /maintenance
-  summary: Inspections every four months, written reports and repairs, so your aerobic system keeps running and stays in good standing with the county.
+  summary: Inspections every four months and a written report after each visit, keeping your aerobic system in good working order and in compliance.
   related: [services-repairs, installation]
 
 - id: services-repairs
@@ -26,7 +26,7 @@
   title: Septic Repairs & Pumping
   short: Repairs & Pumping
   url: /services-repairs
-  summary: Alarm calls, failed pumps and compressors, broken sprinkler lines and tank pump-outs, with a clear diagnosis and a written estimate first.
+  summary: Alarm calls, pump and compressor failures, sprinkler line repairs and tank pump-outs, each with a clear diagnosis and a written estimate.
   related: [maintenance, installation]
 
 - id: land-development
@@ -34,7 +34,7 @@
   title: Land Development
   short: Land Development
   url: /land-development
-  summary: Site plans that lay out lots, roads, utilities and drainage for residential, commercial and industrial tracts, and carry them through approval.
+  summary: Site plans for lots, streets, utilities and drainage on residential, commercial and industrial tracts, carried through agency approval.
   related: [platting, drainageimp, wastewater]
 
 - id: drainageimp
@@ -50,7 +50,7 @@
   title: Water & Wastewater
   short: Water & Wastewater
   url: /wastewater
-  summary: Water and wastewater design for homes, businesses and developments that aren't on city sewer, from single on-site systems to larger sites.
+  summary: Water and wastewater design for homes, businesses and developments without city sewer service, from single on-site systems to larger sites.
   related: [installation, land-development, drainageimp]
 
 - id: fireprotect
@@ -58,7 +58,7 @@
   title: Fire Protection
   short: Fire Protection
   url: /fireprotect
-  summary: Fire protection plans for commercial properties, and help clearing red tags so a building can open or stay open.
+  summary: Fire protection plans for commercial properties and assistance resolving fire marshal red tags so a building can open or remain open.
   related: [firecode, land-development]
 
 - id: platting
@@ -66,7 +66,7 @@
   title: Platting
   short: Platting
   url: /platting
-  summary: Plats that set boundaries, easements and building lines, prepared to the rules of the city, county or MUD that has to approve them.
+  summary: Plats defining boundaries, easements and building lines, prepared to the requirements of the approving city, county or MUD.
   related: [land-development, drainageimp]
 
 - id: firecode
@@ -74,5 +74,5 @@
   title: Fire Code Standards
   short: Fire Code
   url: /firecode
-  summary: Code review and operational-permit support so new and existing buildings meet the fire code that the local fire marshal enforces.
+  summary: Code reviews and operational permit support to bring new and existing buildings into compliance with the locally adopted fire code.
   related: [fireprotect, land-development]

@@ -3,7 +3,7 @@ title: Terms of Use
 description: The plain-English terms for using the Stewart Engineering Services website, covering general information, quotes, links and governing law.
 permalink: /terms
 h1: Terms of Use
-lede: The rules for using this website, in plain English.
+lede: The terms that apply to your use of this website.
 ---
 <section class="section">
 <div class="container">
@@ -25,7 +25,7 @@ Sending a request doesn't schedule work or guarantee availability. We'll confirm
 
 ## Content
 
-The text, photos and logo on this website belong to {{ site.data.business.name }}. Please don't copy them without permission. Customer reviews are quoted from the sites where they were posted.
+The text, photos and logo on this website belong to {{ site.data.business.name }}. They may not be copied without permission. Customer reviews are quoted from the sites where they were posted.
 
 ## Links to other sites
 

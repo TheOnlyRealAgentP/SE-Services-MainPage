@@ -1,0 +1,8 @@
+{%- comment -%} One service card (icon, linked title, summary). Usage: {% include service-card.html id="platting" %} {%- endcomment -%}
+{%- assign s = site.data.services | where: "id", include.id | first -%}
+<li class="card link-card">
+  {% include service-icon.html id=s.id %}
+  <h3><a href="{{ s.url }}">{{ s.title }}</a></h3>
+  <p>{{ s.summary }}</p>
+  <span class="card-more" aria-hidden="true">Learn more {% include icon.html name="arrow" %}</span>
+</li>

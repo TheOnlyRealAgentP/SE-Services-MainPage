@@ -6,11 +6,11 @@ sitemap: false
 side: both
 ---
 {%- assign b = site.data.business -%}
-<section class="page-hero">
+<section class="page-hero hero-dark on-dark">
   <div class="container">
     <p class="eyebrow">Error 404</p>
-    <h1>Sorry, we can't find that page</h1>
-    <p class="lede">The page may have moved when we combined our two websites. Pick the kind of help you need below, or call us at <a href="tel:{{ b.phone_href }}">{{ b.phone }}</a>.</p>
+    <h1>The page you requested could not be found</h1>
+    <p class="lede">This page may have moved when we combined our two websites. Please choose a service below or call us at <a href="tel:{{ b.phone_href }}">{{ b.phone }}</a>.</p>
     <div class="notfound-actions">
       <a class="btn btn-primary btn-lg" href="/services#septic">Septic &amp; aerobic services</a>
       <a class="btn btn-secondary btn-lg" href="/engineering/">Engineering services</a>

@@ -10,6 +10,6 @@
 <picture class="photo{% if include.class %} {{ include.class }}{% endif %}">
   <source type="image/webp" srcset="{{ webp }}" sizes="{{ include.sizes | default: '100vw' }}">
   <img src="/assets/img/{{ include.name }}-{{ img.widths | first }}.jpg" srcset="{{ jpg }}" sizes="{{ include.sizes | default: '100vw' }}"
-       width="{{ img.width }}" height="{{ img.height }}" alt="{{ include.alt | default: img.alt }}"
+       width="{{ img.width }}" height="{{ img.height }}" alt="{% unless include.decorative %}{{ include.alt | default: img.alt }}{% endunless %}"
        {% if include.eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
 </picture>

@@ -14,7 +14,7 @@ layout: default
 {%- else -%}
   {%- assign hub_url = "/services#septic" -%}{%- assign hub_name = "Septic & Aerobic" -%}
 {%- endif -%}
-<section class="service-hero">
+<section class="service-hero hero-dark on-dark">
   <div class="container hero-grid">
     <div class="hero-copy">
       <nav class="crumbs" aria-label="Breadcrumb">
@@ -56,7 +56,7 @@ layout: default
 <section class="section" aria-label="Who it's for and what's included">
   <div class="container two-col">
     <div>
-      <h2>Who it's for</h2>
+      <h2 class="rule">Who it's for</h2>
       <ul class="check-list">
         {%- for w in page.who %}
         <li>{% include icon.html name="check" %}<span>{{ w | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
@@ -64,7 +64,7 @@ layout: default
       </ul>
     </div>
     <div>
-      <h2>What's included</h2>
+      <h2 class="rule">What's included</h2>
       <ul class="check-list">
         {%- for i in page.included %}
         <li>{% include icon.html name="check" %}<span>{{ i | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
@@ -76,7 +76,7 @@ layout: default
 
 <section class="section section-alt" aria-labelledby="process-heading">
   <div class="container">
-    <h2 id="process-heading">{{ page.process_heading | default: "How it works" }}</h2>
+    <h2 id="process-heading" class="rule">{{ page.process_heading | default: "How it works" }}</h2>
     <ol class="steps">
       {%- for s in page.steps %}
       <li>
@@ -91,7 +91,7 @@ layout: default
 <section class="section" aria-labelledby="faq-heading">
   <div class="container faq-grid">
     <div>
-      <h2 id="faq-heading">Questions about {{ svc.title | downcase | replace: "&", "and" }}</h2>
+      <h2 id="faq-heading" class="rule">Questions about {{ svc.title | downcase | replace: "&", "and" }}</h2>
       <div class="faq">
         {%- for f in page.faqs %}
         <details>
