@@ -28,6 +28,7 @@
             {%- for s in septic %}
             <li><a href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}>{{ s.short }}</a></li>
             {%- endfor %}
+            <li><a href="/how-septic-systems-work"{% if page.url == '/how-septic-systems-work' %} aria-current="page"{% endif %}>How Septic Works</a></li>
             <li><a href="/faqs"{% if page.url == '/faqs' %} aria-current="page"{% endif %}>Homeowner FAQ</a></li>
           </ul>
         </li>

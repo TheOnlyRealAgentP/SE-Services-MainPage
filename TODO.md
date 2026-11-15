@@ -49,6 +49,9 @@ its marker disappears from every page.
       "A Stewart family business". Also confirm the Royal Stewart thread
       count used in `assets/img/royal-stewart.svg` against the Scottish
       Register of Tartans.
+- [ ] **/how-septic-systems-work:** confirm the brand of three-tank aerobic
+      system we install (mentioned as "Tuff Tiger"; the green lids in the
+      photos look like Tuf-Tite risers) before naming it on the page.
 - [ ] **/about: owner bio.** Two or three sentences: background, licenses,
       what they handle personally. (Reviews mention "Mr. Stewart" and "Joe";
       the site doesn't name anyone until you confirm.)

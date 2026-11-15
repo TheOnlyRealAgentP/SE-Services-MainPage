@@ -866,3 +866,64 @@ html:not(.js) .reviews-controls { display: none; }
   content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px;
   background: url("../img/royal-stewart.svg") 0 -70px / 110px 110px repeat;
 }
+
+/* ---------- Septic guide (how-septic-systems-work) ---------- */
+.guide-photo { margin: 0; }
+.guide-photo img { border-radius: var(--radius); box-shadow: var(--shadow); }
+.guide-photo figcaption { margin-top: var(--s-1); font-size: var(--fs-sm); color: var(--muted); }
+.diagram { margin: 0 0 var(--s-4); }
+.diagram-scroll { overflow-x: auto; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.diagram svg { display: block; width: 100%; min-width: 620px; height: auto; }
+.swipe-note { display: none; margin-top: var(--s-1); font-size: var(--fs-sm); color: var(--muted); }
+@media (max-width: 660px) { .swipe-note { display: block; } }
+.dg-soil { fill: #EFE6DA; }
+.dg-grass { fill: #9DB98A; }
+.dg-roof { fill: var(--accent); }
+.dg-house { fill: #fff; stroke: var(--ink); stroke-width: 3; }
+.dg-window { fill: #CFE3F1; stroke: var(--ink); stroke-width: 2; }
+.dg-door { fill: var(--ink); }
+.dg-panel { fill: #F4F6F8; stroke: var(--ink); stroke-width: 2; }
+.dg-alarm { fill: #D9452B; }
+.dg-pipe { fill: none; stroke: #7F8FA3; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
+.dg-pipe-thin { stroke-width: 7; }
+.dg-flow { fill: #4A6FDB; }
+.dg-tank { fill: none; stroke: #5E6B7B; stroke-width: 5; }
+.dg-riser { fill: #DDE3E9; stroke: #6B7A8C; stroke-width: 3; }
+.dg-lid { fill: #3E8E5F; }
+.dg-scum { fill: #CDB894; }
+.dg-liquid { fill: #CFE3F1; }
+.dg-sludge { fill: #8A6C50; }
+.dg-baffle { fill: none; stroke: #5E6B7B; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.dg-box { fill: #DDE3E9; stroke: #6B7A8C; stroke-width: 3; }
+.dg-gravel { fill: #C9C2B6; }
+.dg-perf { fill: none; stroke: #5E6B7B; stroke-width: 5; stroke-dasharray: 10 6; }
+.dg-seep { fill: none; stroke: #4A6FDB; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 6; }
+.dg-compressor { fill: var(--ink); }
+.dg-air { fill: none; stroke: var(--ink); stroke-width: 4; stroke-dasharray: 7 5; }
+.dg-bubbles circle { fill: #fff; stroke: #4A6FDB; stroke-width: 2; }
+.dg-chlor { fill: #fff; stroke: #6B7A8C; stroke-width: 3; }
+.dg-tablet { fill: #F1EEE6; stroke: #9AA6B3; stroke-width: 2; }
+.dg-pump { fill: var(--ink); }
+.dg-head { fill: #3E8E5F; }
+.dg-spray { fill: none; stroke: #4A6FDB; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 3 8; }
+.dg-leader { fill: none; stroke: var(--accent); stroke-width: 2; stroke-dasharray: 4 4; }
+.dg-num circle { fill: var(--accent); stroke: #fff; stroke-width: 3; }
+.dg-num text { fill: #fff; font-family: var(--font-head); font-weight: 700; font-size: 21px; text-anchor: middle; }
+.dg-small { font-family: var(--font-head); font-weight: 600; font-size: 17px; fill: var(--ink); }
+.dg-small-light { fill: #fff; }
+.dg-note { font-family: var(--font); font-style: italic; font-size: 17px; fill: #5E4B36; }
+.guide-steps { margin-top: var(--s-2); }
+.guide-note { display: flex; gap: 10px; align-items: flex-start; margin-top: var(--s-4); padding: var(--s-2) var(--s-3); background: var(--accent-soft); border-radius: var(--radius); color: var(--ink); max-width: 48rem; }
+.guide-note .icon { flex: none; color: var(--accent); margin-top: 2px; }
+.dodont { display: grid; gap: var(--s-3); }
+@media (min-width: 860px) { .dodont { grid-template-columns: 1fr 1fr; } }
+.dodont h3 { display: flex; align-items: center; gap: 8px; font-size: 1.5rem; }
+.dodont ul { margin: 0; padding-left: 1.2rem; display: grid; gap: 8px; }
+.dodont-do { border-top: 4px solid #2E7D4F; }
+.dodont-do h3 .icon { color: #2E7D4F; }
+.dodont-dont { border-top: 4px solid var(--accent); }
+.dodont-dont h3 .icon { color: var(--accent); }
+.signs h3 { display: flex; align-items: center; gap: 8px; font-size: 1.1875rem; }
+.signs h3 .icon { flex: none; color: var(--accent); }
+.signs p { color: var(--text); }
+.guide-actions { margin-top: var(--s-4); }

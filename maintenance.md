@@ -54,4 +54,4 @@ faqs:
 
 An aerobic system relies on several mechanical components: an air compressor, a sprinkler pump, an alarm and a disinfection unit. When one of them fails, wastewater usually continues to flow but is no longer treated properly. The problem often goes unnoticed until there is an odor, the alarm sounds or part of the yard stays wet.
 
-Regular inspections identify worn components early, while they are still inexpensive to replace, and keep the system operating as designed. With a contract in place, we track the inspection schedule for you.
+Regular inspections identify worn components early, while they are still inexpensive to replace, and keep the system operating as designed. With a contract in place, we track the inspection schedule for you. To see how each part works, read our guide to [how a septic system works](/how-septic-systems-work).
