@@ -144,6 +144,8 @@ within a minute. Domain setup is in the local `DEPLOY.md`, which is not committe
   each town linking to its section on /service-area. To rebuild it (for
   example after adding a town), run `scripts/fetch_map_data.sh` and then
   `scripts/area_map.py`; instructions are at the top of the fetch script.
-- Logo: `assets/img/logo.svg` (and `logo-reversed.svg` for dark
-  backgrounds), rebuilt as a vector from the original Stewart Engineering
-  logo.
+- Logo: `assets/img/logo-badge.svg` (and `logo-badge-reversed.svg` for dark
+  backgrounds): the gear-and-compass in a white-ringed Royal Stewart tartan
+  badge (`royal-stewart.svg`) beside the STEWART lettering. `logo-mark-badge.svg`
+  is the badge alone. The plain logo (`logo.svg`, `logo-reversed.svg`,
+  `logo.png`) stays for print, the favicon and Google.

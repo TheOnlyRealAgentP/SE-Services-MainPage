@@ -152,8 +152,8 @@ mark.todo {
   min-height: 4.5rem; flex-wrap: wrap;
 }
 .brand { display: inline-flex; color: var(--ink); text-decoration: none; margin-right: auto; }
-.brand .logo { width: min(200px, calc(100vw - 2 * var(--gutter) - 120px)); height: auto; }
-@media (min-width: 768px) { .brand .logo { width: 220px; } }
+.brand .logo { width: min(220px, calc(100vw - 2 * var(--gutter) - 120px)); height: auto; }
+@media (min-width: 768px) { .brand .logo { width: 240px; } }
 
 .header-phone {
   display: none; align-items: center; gap: 6px; min-height: 44px;
@@ -226,7 +226,7 @@ html:not(.js) .sub-toggle { display: none; }
 @media (min-width: 1200px) {
   .header-inner { flex-wrap: nowrap; gap: var(--s-3); }
   .brand { margin-right: 0; }
-  .brand .logo { width: 224px; }
+  .brand .logo { width: 236px; }
   .menu-toggle { display: none; }
   .js .site-nav, .site-nav { display: flex; align-items: center; gap: var(--s-2); flex: 1; flex-basis: auto; padding: 0; order: 2; }
   .header-phone { order: 3; font-size: var(--fs-md); }
@@ -529,17 +529,12 @@ html:not(.js) .sub-toggle { display: none; }
 @media (min-width: 960px) { .cta-inner { grid-template-columns: 1fr auto; gap: var(--s-5); } .cta-actions .btn { flex: 0 0 auto; } }
 
 /* ---------- Footer ---------- */
-/* Royal Stewart tartan (assets/img/royal-stewart.svg) woven faintly under the navy */
-.site-footer {
-  color: #C4D2E0; padding-top: var(--s-5); font-size: 0.9375rem;
-  background: linear-gradient(rgba(10, 26, 43, .92), rgba(10, 26, 43, .92)), url("../img/royal-stewart.svg") 0 0 / 220px 220px repeat #0A1A2B;
-  border-top: 1px solid rgba(255, 255, 255, .1);
-}
+.site-footer { background: #0A1A2B; color: #C4D2E0; padding-top: var(--s-5); font-size: 0.9375rem; border-top: 4px solid var(--accent); }
 .site-footer a { color: #DCE6F0; }
 .site-footer a:hover { color: var(--white); }
 .site-footer strong { color: var(--white); }
 .site-footer .brand { margin-bottom: var(--s-3); }
-.site-footer .brand .logo { width: 220px; }
+.site-footer .brand .logo { width: 260px; }
 .footer-grid { display: grid; gap: var(--s-4); }
 @media (min-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; } }
@@ -599,9 +594,9 @@ html:not(.js) .sub-toggle { display: none; }
   background-position: -1px -1px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
 }
-.ph-blueprint img { width: 34%; max-width: 168px; height: auto; aspect-ratio: 1; object-fit: contain; opacity: .92; }
+.ph-blueprint img { width: 40%; max-width: 200px; height: auto; aspect-ratio: 1; object-fit: contain; }
 .door-media .ph-blueprint { aspect-ratio: 16 / 9; border-radius: 0; }
-.door-media .ph-blueprint img { width: 24%; }
+.door-media .ph-blueprint img { width: 30%; }
 
 /* Service cards with icons */
 .svc-icon {
@@ -750,8 +745,8 @@ html:not(.js) .sub-toggle { display: none; }
     content: ""; position: absolute; pointer-events: none;
     width: 300px; height: 300px; top: 50%; transform: translateY(-58%);
     left: calc(50% - 592px - 340px);
-    background: url("../img/logo-mark-reversed.svg") no-repeat center / contain;
-    opacity: .9;
+    background: url("../img/logo-mark-badge.svg") no-repeat center / contain;
+    opacity: 1;
   }
 }
 
@@ -863,9 +858,4 @@ html:not(.js) .reviews-controls { display: none; }
   background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
   box-shadow: 0 12px 40px rgba(14, 35, 56, .18);
 }
-.heritage-badge {
-  display: grid; place-items: center; width: 42%; aspect-ratio: 1; border-radius: 50%;
-  background: url("../img/royal-stewart.svg") center / 150px 150px repeat #C80000;
-  box-shadow: 0 0 0 7px #fff, 0 12px 34px rgba(0, 0, 0, .45), inset 0 0 50px rgba(20, 0, 0, .35);
-}
-.heritage-badge img { width: 72%; height: auto; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, .6)); }
+.heritage-panel img { width: 50%; height: auto; }
