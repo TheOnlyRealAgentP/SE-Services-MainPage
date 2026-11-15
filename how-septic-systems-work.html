@@ -90,14 +90,14 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
     <div class="section-head">
       <p class="eyebrow">Type 2 · What we install</p>
       <h2 id="aer-heading">Three-tank aerobic system</h2>
-      <p>An aerobic system treats the water inside the tanks using air and oxygen-loving bacteria, then disinfects it and returns it to the lawn, either through sprinklers or through drip lines buried just below the surface. It works well in heavy clay soil and on smaller lots. We install three-tank aerobic systems with spray or drip distribution.</p>
+      <p>An aerobic system treats the water inside the tanks using air and oxygen-loving bacteria, then returns it to the lawn, either disinfected and sprayed through sprinklers, or filtered and released through drip lines buried just below the surface. It works well in heavy clay soil and on smaller lots. We install three-tank aerobic systems with spray or drip distribution.</p>
       {%- if site.show_todos %}<p>{% include todo.html t="confirm the brand of aerobic system we install (mentioned as 'Tuff Tiger') before naming it here" %}</p>{% endif %}
     </div>
     <figure class="diagram">
       <div class="diagram-scroll">
       <svg viewBox="0 0 1000 400" role="img" aria-labelledby="aer-title aer-desc">
         <title id="aer-title">Three-tank aerobic septic system diagram</title>
-        <desc id="aer-desc">Wastewater flows from the house into a trash tank where solids settle. It moves into an aerobic treatment tank, where an air pump bubbles air through the water and a clarifier lets particles settle. Clear water passes through a chlorinator into a pump tank, and a pump sends it to sprinkler heads that spray it over the lawn, or to drip lines buried just below the surface.</desc>
+        <desc id="aer-desc">Wastewater flows from the house into a trash tank where solids settle. It moves into an aerobic treatment tank, where an air pump bubbles air through the water and a clarifier lets particles settle. On spray systems, clear water passes through a chlorinator into a pump tank and a pump sends it to sprinkler heads. On drip systems there is no chlorinator; the pump sends the water through a filter into drip lines buried just below the surface.</desc>
         <rect class="dg-soil" x="0" y="170" width="1000" height="230"/>
         <rect class="dg-grass" x="0" y="160" width="1000" height="14" rx="3"/>
         <!-- house with control panel -->
@@ -132,6 +132,7 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
         <path class="dg-pipe dg-pipe-thin" d="M680 220 H760"/>
         <rect class="dg-chlor" x="712" y="148" width="18" height="90" rx="4"/><rect class="dg-lid" x="707" y="143" width="28" height="8" rx="3"/>
         <circle class="dg-tablet" cx="721" cy="176" r="6"/><circle class="dg-tablet" cx="721" cy="191" r="6"/><circle class="dg-tablet" cx="721" cy="206" r="6"/>
+        <text class="dg-tiny" x="738" y="136">spray systems</text>
         <!-- tank 3: pump tank -->
         <rect class="dg-riser" x="800" y="162" width="38" height="30"/><rect class="dg-lid" x="794" y="156" width="50" height="9" rx="3"/>
         <rect class="dg-tank" x="760" y="190" width="130" height="150" rx="12"/>
@@ -142,6 +143,9 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
         <rect class="dg-head" x="952" y="150" width="12" height="16" rx="2"/>
         <path class="dg-spray" d="M958 148 Q930 96 880 104 M958 148 Q956 92 912 76 M958 148 Q980 104 990 120"/>
         <path class="dg-drip" d="M906 182 V206 H990 M906 206 V230 H990"/>
+        <rect class="dg-filter" x="896" y="186" width="20" height="14" rx="4"/>
+        <path class="dg-leader dg-leader-thin" d="M906 158 V185"/>
+        <text class="dg-tiny" x="906" y="152" text-anchor="middle">filter</text>
         <g class="dg-emit"><circle cx="926" cy="206" r="3.5"/><circle cx="950" cy="206" r="3.5"/><circle cx="974" cy="206" r="3.5"/><circle cx="926" cy="230" r="3.5"/><circle cx="950" cy="230" r="3.5"/><circle cx="974" cy="230" r="3.5"/></g>
         <path class="dg-seep" d="M926 238 v10 M950 238 v14 M974 238 v10"/>
         <text class="dg-small" x="948" y="276" text-anchor="middle">or drip lines</text>
@@ -163,9 +167,9 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
       <li><h3>Trash tank</h3><p>Wastewater enters the first tank, where solids settle to the bottom and grease floats to the top, just as in a conventional tank.</p></li>
       <li><h3>Aeration chamber</h3><p>An air pump pushes air into the second tank. The oxygen feeds aerobic bacteria that break down waste faster and more completely than in a conventional tank.</p></li>
       <li><h3>Clarifier</h3><p>In a calm section of the same tank, remaining particles settle back into the aeration chamber, leaving clear water at the top.</p></li>
-      <li><h3>Chlorinator</h3><p>The clear water passes over chlorine tablets that disinfect it on its way to the last tank.</p></li>
+      <li><h3>Chlorinator (spray systems)</h3><p>On systems with sprinklers, the clear water passes over chlorine tablets that disinfect it before it is sprayed. Drip systems skip this step because the water stays below the surface.</p></li>
       <li><h3>Pump tank</h3><p>The third tank holds the treated water. When it fills, a pump switches on.</p></li>
-      <li><h3>Sprinklers or drip lines</h3><p>The pump sends the treated water either to sprinkler heads that spray it over the lawn, or to drip lines buried a few inches down that release it slowly into the soil.</p></li>
+      <li><h3>Sprinklers or drip lines</h3><p>The pump sends the treated water either to sprinkler heads that spray it over the lawn, or through a filter that keeps the tiny emitters from clogging and into drip lines buried a few inches down, which release it slowly into the soil.</p></li>
     </ol>
     <p class="guide-note">{% include icon.html name="alert" %}<span>A control panel runs the pumps and turns on a light or buzzer if something stops working. If the alarm comes on, check the breaker first, then <a href="tel:{{ b.phone_href }}">call us</a>.</span></p>
   </div>
@@ -185,7 +189,7 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
           <li>Have the tanks pumped every two to three years, or sooner with heavy use</li>
           <li>Spread laundry and other big water uses across the week</li>
           <li>Fix running toilets and dripping faucets right away</li>
-          <li>Keep the chlorinator stocked with tablets made for wastewater systems, not pool tablets</li>
+          <li>On spray systems, keep the chlorinator stocked with tablets made for wastewater systems, not pool tablets</li>
           <li>Leave the air pump running and its breaker on</li>
           <li>Keep the tank lids reachable and the spray or drip area clear</li>
           <li>Call when the alarm comes on, the sooner the better</li>

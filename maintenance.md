@@ -40,7 +40,7 @@ faqs:
     a: For most aerobic systems, yes. Texas rules require aerobic systems to be covered by a maintenance contract kept on file with the county. For systems in Harris County, we file the inspection reports for you. Homeowners may maintain their own system only after completing the required training and certification.
     todo: verify against current TCEQ rules (30 TAC Chapter 285) and Harris County requirements
   - q: What do you check during each inspection?
-    a: We confirm that the air compressor (aerator) is operating properly, test the pumps and alarm, check the disinfection unit for chlorine and observe the sprinkler heads in operation. We also check the tanks and let you know when pumping is needed.
+    a: We confirm that the air compressor (aerator) is operating properly, test the pumps and alarm, check the chlorinator on spray systems or the filter on drip systems, and watch the sprinklers or drip field in operation. We also check the tanks and let you know when pumping is needed.
     todo: confirm this matches the technicians' actual checklist
   - q: What should I do if my alarm sounds between visits?
     a: First, check the breaker for the septic system. If it has not tripped, call our office and limit water use, such as laundry, dishwashing and long showers, until the system has been inspected.
