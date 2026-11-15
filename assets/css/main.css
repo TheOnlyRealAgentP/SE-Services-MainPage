@@ -745,8 +745,8 @@ html:not(.js) .sub-toggle { display: none; }
     content: ""; position: absolute; pointer-events: none;
     width: 300px; height: 300px; top: 50%; transform: translateY(-58%);
     left: calc(50% - 592px - 340px);
-    background: url("../img/logo-mark-badge.svg") no-repeat center / contain;
-    opacity: 1;
+    background: url("../img/logo-mark-reversed.svg") no-repeat center / contain;
+    opacity: .9;
   }
 }
 
