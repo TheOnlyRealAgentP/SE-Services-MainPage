@@ -520,11 +520,7 @@ html:not(.js) .sub-toggle { display: none; }
 .quote-form.is-sending button[type="submit"] { opacity: .7; cursor: progress; }
 
 /* ---------- CTA band ---------- */
-/* Royal Stewart tartan (assets/img/royal-stewart.svg) woven faintly under the navy */
-.cta-band {
-  color: #D6E2EE; padding-block: var(--s-5);
-  background: linear-gradient(rgba(14, 35, 56, .86), rgba(14, 35, 56, .86)), url("../img/royal-stewart.svg") 0 0 / 180px 180px repeat var(--ink);
-}
+.cta-band { background: var(--ink); color: #D6E2EE; padding-block: var(--s-5); background-image: linear-gradient(var(--blueprint) 1px, transparent 1px), linear-gradient(90deg, var(--blueprint) 1px, transparent 1px); background-size: 80px 80px; }
 .cta-band h2 { color: var(--white); }
 .cta-band p { margin: 0; max-width: 40rem; }
 .cta-inner { display: grid; gap: var(--s-3); align-items: center; }
@@ -533,6 +529,7 @@ html:not(.js) .sub-toggle { display: none; }
 @media (min-width: 960px) { .cta-inner { grid-template-columns: 1fr auto; gap: var(--s-5); } .cta-actions .btn { flex: 0 0 auto; } }
 
 /* ---------- Footer ---------- */
+/* Royal Stewart tartan (assets/img/royal-stewart.svg) woven faintly under the navy */
 .site-footer {
   color: #C4D2E0; padding-top: var(--s-5); font-size: 0.9375rem;
   background: linear-gradient(rgba(10, 26, 43, .92), rgba(10, 26, 43, .92)), url("../img/royal-stewart.svg") 0 0 / 220px 220px repeat #0A1A2B;
