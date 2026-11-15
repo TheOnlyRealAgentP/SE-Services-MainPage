@@ -153,8 +153,8 @@ mark.todo {
 }
 @media (min-width: 1200px) { .header-inner { padding-block: 8px; } }
 .brand { display: inline-flex; color: var(--ink); text-decoration: none; margin-right: auto; }
-.brand .logo { width: min(250px, calc(100vw - 2 * var(--gutter) - 70px)); height: auto; }
-@media (min-width: 768px) { .brand .logo { width: 275px; } }
+.brand .logo { width: min(265px, calc(100vw - 2 * var(--gutter) - 70px)); height: auto; }
+@media (min-width: 768px) { .brand .logo { width: 301px; } }
 
 .header-phone {
   display: none; align-items: center; gap: 6px; min-height: 44px;
@@ -225,15 +225,15 @@ html:not(.js) .sub-toggle { display: none; }
 .nav-cta { width: 100%; }
 
 @media (min-width: 1200px) {
-  .header-inner { flex-wrap: nowrap; gap: var(--s-3); }
+  .header-inner { flex-wrap: nowrap; gap: 20px; }
   .brand { margin-right: 0; }
-  .brand .logo { width: 271px; }
+  .brand .logo { width: 297px; }
   .menu-toggle { display: none; }
   .js .site-nav, .site-nav { display: flex; align-items: center; gap: var(--s-2); flex: 1; flex-basis: auto; padding: 0; order: 2; }
   .header-phone { order: 3; font-size: var(--fs-md); }
   .nav-list { display: flex; gap: 0; margin-left: auto; }
   .nav-list > li { border: 0; position: relative; }
-  .nav-list > li > a { padding: 0 10px; min-height: 4.5rem; font-family: var(--font-head); font-size: 1.0625rem; font-weight: 600; white-space: nowrap; }
+  .nav-list > li > a { padding: 0 8px; min-height: 4.5rem; font-family: var(--font-head); font-size: 1.0625rem; font-weight: 600; white-space: nowrap; }
   .nav-cta { white-space: nowrap; }
   .nav-list > li > a.is-section { box-shadow: inset 0 -3px 0 var(--accent); }
   .has-sub > a::after {
@@ -535,7 +535,7 @@ html:not(.js) .sub-toggle { display: none; }
 .site-footer a:hover { color: var(--white); }
 .site-footer strong { color: var(--white); }
 .site-footer .brand { margin-bottom: var(--s-3); }
-.site-footer .brand .logo { width: 290px; }
+.site-footer .brand .logo { width: 315px; }
 .footer-grid { display: grid; gap: var(--s-4); }
 @media (min-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; } }
