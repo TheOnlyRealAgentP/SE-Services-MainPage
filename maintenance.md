@@ -1,13 +1,13 @@
 ---
 layout: service
 title: Aerobic Maintenance, Houston
-description: Aerobic septic maintenance contracts in Channelview, Baytown, Crosby and east Harris County, with inspections every 4 months, written reports and repairs.
+description: Aerobic septic maintenance contracts in Channelview, Baytown, Crosby and east Harris County, with inspections every 3 months, written reports and repairs.
 permalink: /maintenance
 side: septic
 service_id: maintenance
 service_type: Aerobic septic system maintenance
 h1: Aerobic Septic Maintenance Contracts in East Harris County
-lede: We inspect your aerobic system every four months, provide a written report after each visit, and identify problems early, before they lead to a backup or a costly repair.
+lede: We inspect your aerobic system every three months, provide a written report after each visit, and identify problems early, before they lead to a backup or a costly repair.
 cta_label: Start a maintenance contract
 quote_service: maintenance
 photo: aerobic-system-lawn
@@ -18,7 +18,7 @@ who:
   - Property owners whose current provider is no longer servicing their system
   - Businesses, churches and other commercial properties with an on-site aerobic system
 included:
-  - An inspection every four months, for a total of three visits per year
+  - An inspection every three months, four visits a year, as Harris County requires for residential systems
   - A written report after every visit documenting what was inspected and any findings
   - 'Filing of your inspection reports with Harris County <mark class="todo">TODO: confirm whether we also file for Chambers County customers (Mont Belvieu, east Baytown)</mark>'
   - Repairs and replacement parts as needed, quoted separately and in writing before any work begins
@@ -30,7 +30,7 @@ steps:
   - title: Initial inspection
     text: We set up your contract and inspect the system to establish its current condition.
   - title: Scheduled inspections
-    text: Every four months, a technician checks the system's equipment, alarm, disinfection and spray heads.
+    text: Every three months, a technician checks the system's equipment, alarm, disinfection and spray heads.
   - title: Written report
     text: You receive a report after each visit. For systems in Harris County, we file it with the county on your behalf.
   - title: Repairs as needed

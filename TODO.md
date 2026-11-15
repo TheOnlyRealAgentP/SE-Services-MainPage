@@ -72,6 +72,16 @@ its marker disappears from every page.
 
 ## 3. Regulatory statements to verify
 
+**Read the Harris County order first.** "Revised Rules of Harris County for
+On-Site Sewage Facilities" (adopted Dec 21, 2010; TCEQ-approved Feb 7, 2011)
+is posted at https://oce.harriscountytx.gov/Services/Permits/Documents.
+The septic guide's "allowed in Harris County" section and the
+self-maintenance FAQ are based on it.
+
+- [x] Maintenance frequency: confirmed four visits a year (every three
+      months), matching the county order. Site updated everywhere.
+- [ ] Confirm the Harris County order hasn't been amended since 2011.
+
 These read correctly to the best of our knowledge but must be checked
 against current rules before launch, because rules change and getting them
 wrong on a licensed firm's website is a real problem.
