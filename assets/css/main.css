@@ -615,7 +615,7 @@ html:not(.js) .sub-toggle { display: none; }
 
 /* Big numbers on the home page */
 .stats { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-2); }
-.stat { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: var(--radius); padding: var(--s-3) var(--s-2); }
+.stat { position: relative; overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: calc(var(--s-3) + 4px) var(--s-2) var(--s-3); }
 .stat-num { display: block; font-family: var(--font-head); font-size: clamp(2.25rem, 1.8rem + 2vw, 3rem); font-weight: 700; line-height: 1; color: var(--ink); margin-bottom: var(--s-1); }
 .stat-label { display: block; color: var(--muted); font-size: var(--fs-sm); line-height: 1.4; }
 @media (min-width: 640px) { .stat { padding: var(--s-3); } }
@@ -762,7 +762,7 @@ html:not(.js) .sub-toggle { display: none; }
 .review-slide {
   flex: 0 0 100%; scroll-snap-align: start; margin: 0; position: relative;
   display: flex; flex-direction: column; justify-content: center;
-  background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--accent);
+  background: var(--white); border: 1px solid var(--line); overflow: hidden;
   border-radius: var(--radius); box-shadow: var(--shadow);
   padding: var(--s-5) var(--s-3) var(--s-3);
 }
@@ -860,3 +860,9 @@ html:not(.js) .reviews-controls { display: none; }
   box-shadow: 0 12px 40px rgba(14, 35, 56, .18);
 }
 .heritage-panel img { width: 50%; height: auto; }
+
+/* Thin Royal Stewart tartan strip across the top of the number cards and review cards */
+.stat::before, .review-slide::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px;
+  background: url("../img/royal-stewart.svg") 0 -70px / 110px 110px repeat;
+}

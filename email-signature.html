@@ -1,0 +1,90 @@
+---
+layout: null
+permalink: /email-signature
+sitemap: false
+---
+{%- comment -%}
+  Copy-and-paste email signatures. Not linked from the site and hidden from
+  search engines. Contact details come from _data/business.yml. Email
+  programs can't show SVG, so the badge is a PNG hosted on the site.
+{%- endcomment -%}
+{%- assign b = site.data.business -%}
+{%- capture badge -%}{{ site.url }}/assets/img/email/badge-152.png{%- endcapture -%}
+{%- capture site_link -%}<a href="{{ site.url }}" style="color:#0A6AA8;text-decoration:underline;">stewartengineeringservices.com</a>{%- endcapture -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Email signature | {{ b.name }}</title>
+<meta name="description" content="Copy-and-paste email signatures for {{ b.name }} staff.">
+<style>
+  body { margin: 0; padding: 32px 16px 64px; background: #F4F6F8; color: #334155; font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; }
+  h1 { color: #0E2338; font-size: 1.75rem; margin: 0 0 8px; }
+  h2 { color: #0E2338; font-size: 1.125rem; margin: 32px 0 8px; }
+  .box { background: #fff; border: 1px solid #D7DFE8; border-radius: 8px; padding: 24px; }
+  ol { padding-left: 1.25rem; } li { margin-bottom: 6px; }
+  .note { font-size: .875rem; color: #556274; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Email signature</h1>
+  <p>Select everything inside a white box below (click and drag from the top-left of the logo to the end of the last line), copy it, and paste it into your email settings.</p>
+
+  <h2>Office signature</h2>
+  <div class="box">
+    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#333333;">
+      <tr>
+        <td style="padding:0 16px 0 0;border-right:3px solid #8E2A31;vertical-align:middle;">
+          <a href="{{ site.url }}"><img src="{{ badge }}" width="76" height="76" alt="{{ b.name }}" style="display:block;border:0;width:76px;height:76px;"></a>
+        </td>
+        <td style="padding:0 0 0 16px;vertical-align:middle;line-height:1.5;">
+          <div style="font-size:16px;font-weight:bold;color:#0E2338;">{{ b.name }}</div>
+          <div style="font-size:13px;color:#8E2A31;">Septic &amp; Aerobic Services · Civil Engineering</div>
+          <div style="font-size:13px;"><a href="tel:{{ b.phone_href }}" style="color:#333333;text-decoration:none;">{{ b.phone }}</a> · <a href="mailto:{{ b.email }}" style="color:#333333;text-decoration:none;">{{ b.email }}</a></div>
+          <div style="font-size:13px;">{{ site_link }} · {{ b.address.street }}, {{ b.address.city }}, {{ b.address.region }} {{ b.address.postal_code }}</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>Personal signature</h2>
+  <p class="note">After pasting, replace "Your Name" and "Your Title" with your own.</p>
+  <div class="box">
+    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#333333;">
+      <tr>
+        <td style="padding:0 16px 0 0;border-right:3px solid #8E2A31;vertical-align:middle;">
+          <a href="{{ site.url }}"><img src="{{ badge }}" width="76" height="76" alt="{{ b.name }}" style="display:block;border:0;width:76px;height:76px;"></a>
+        </td>
+        <td style="padding:0 0 0 16px;vertical-align:middle;line-height:1.5;">
+          <div style="font-size:16px;font-weight:bold;color:#0E2338;">Your Name</div>
+          <div style="font-size:13px;color:#8E2A31;">Your Title · {{ b.name }}</div>
+          <div style="font-size:13px;"><a href="tel:{{ b.phone_href }}" style="color:#333333;text-decoration:none;">{{ b.phone }}</a> · <a href="mailto:{{ b.email }}" style="color:#333333;text-decoration:none;">{{ b.email }}</a></div>
+          <div style="font-size:13px;">{{ site_link }} · {{ b.address.city }}, {{ b.address.region }}</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>Gmail</h2>
+  <ol>
+    <li>Open Gmail on a computer, click the gear icon, then <b>See all settings</b>.</li>
+    <li>On the <b>General</b> tab, scroll to <b>Signature</b> and click <b>Create new</b>.</li>
+    <li>Paste the signature into the box, then click <b>Save changes</b> at the bottom of the page.</li>
+  </ol>
+
+  <h2>Outlook</h2>
+  <ol>
+    <li>Outlook on the web: <b>Settings</b> (gear) → <b>Mail</b> → <b>Compose and reply</b>. Outlook for Windows: <b>File</b> → <b>Options</b> → <b>Mail</b> → <b>Signatures</b>.</li>
+    <li>Create a new signature, paste, and save.</li>
+  </ol>
+
+  <h2>Phone mail apps</h2>
+  <p>Most phone apps only accept plain text. Use this line instead:</p>
+  <div class="box" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;">{{ b.name }} · {{ b.phone }} · {{ b.email }} · stewartengineeringservices.com</div>
+</main>
+</body>
+</html>
