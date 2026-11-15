@@ -40,7 +40,7 @@ steps:
     text: The system is inspected and started up, and we review its operation and maintenance with you.
 faqs:
   - q: Do I need an aerobic system or a conventional system?
-    a: The answer depends primarily on the soil and the size of the lot. Much of East Harris County has dense clay soil that drains slowly, which often rules out a conventional drain field and makes an aerobic system with spray or drip distribution the better choice. The soil evaluation determines which options are suitable for your property.
+    a: The answer depends primarily on the soil and the size of the lot. Much of East Harris County has dense clay soil that drains slowly, which often rules out a conventional drain field and makes an aerobic system with spray or drip distribution the better choice. The soil evaluation determines which options are suitable for your property. See our side-by-side guide to [which septic system is right for you](/how-septic-systems-work#which-system).
   - q: Is a permit required?
     a: Yes. New and replacement septic systems in Texas require a permit from the local permitting authority before installation. We prepare and submit the application for you.
     todo: confirm the permitting authority for each county served (Harris County, Chambers County)

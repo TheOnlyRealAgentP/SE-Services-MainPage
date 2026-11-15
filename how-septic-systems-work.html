@@ -14,7 +14,7 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
     <div class="prose">
       <h2 id="what-heading" class="rule">What is a septic system?</h2>
       <p>If your home is not connected to city sewer, everything that goes down your drains, including toilets, showers, sinks and laundry, flows to a septic system buried in your yard. The system holds the wastewater, lets the solids settle and break down, and returns cleaned water to the ground.</p>
-      <p>Most homes in East Harris County use one of two types: a <a href="#conventional">conventional system</a>, which treats the water in the soil, or an <a href="#aerobic">aerobic system</a>, which treats it inside the tanks and returns it to the lawn through sprinklers or drip lines. Much of the area has dense clay soil that drains slowly, so aerobic systems are common here.</p>
+      <p>Most homes in East Harris County use one of two types: a <a href="#conventional">conventional system</a>, which treats the water in the soil, or an <a href="#aerobic">aerobic system</a>, which treats it inside the tanks and returns it to the lawn through sprinklers or drip lines. Much of the area has dense clay soil that drains slowly, so aerobic systems are common here. Not sure which you need? See <a href="#which-system">which system is right for you</a>.</p>
     </div>
     <figure class="guide-photo">
       {% include picture.html name="aerobic-system-lawn" sizes="(min-width: 768px) 46vw, 100vw" %}
@@ -175,7 +175,59 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
   </div>
 </section>
 
-<section class="section section-alt" aria-labelledby="protect-heading">
+<section class="section section-alt" id="which-system" aria-labelledby="which-heading">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="which-heading">Which system is right for me?</h2>
+      <p>Each type works well in the right setting. Here is how they compare. The final answer depends on your soil, your lot and the county permit, which we check during a site evaluation.</p>
+    </div>
+    <ul class="compare">
+      <li class="card compare-card">
+        <h3>Conventional</h3>
+        <p class="compare-sub">Septic tank and drain field</p>
+        <dl>
+          <dt>Best for</dt><dd>Larger lots with soil that drains well</dd>
+          <dt>Treated water</dt><dd>Soaks into the ground through gravel drain-field trenches</dd>
+          <dt>Upkeep</dt><dd>The least. Pump the tank every few years.</dd>
+          <dt>Electricity</dt><dd>Usually none; gravity does the work</dd>
+          <dt>Keep in mind</dt><dd>Needs a large area of suitable soil. Heavy clay often rules it out.</dd>
+        </dl>
+      </li>
+      <li class="card compare-card">
+        <h3>Aerobic with sprinklers</h3>
+        <p class="compare-sub">Three tanks, chlorinator, spray heads</p>
+        <dl>
+          <dt>Best for</dt><dd>Clay soil and lots with open lawn space</dd>
+          <dt>Treated water</dt><dd>Disinfected, then sprayed over a lawn area</dd>
+          <dt>Upkeep</dt><dd>A maintenance contract with inspections every four months, and chlorine tablets kept stocked</dd>
+          <dt>Electricity</dt><dd>Yes, for the air pump and the spray pump</dd>
+          <dt>Keep in mind</dt><dd>The spray area has to stay open and clear, and you will see the sprinklers run.</dd>
+        </dl>
+      </li>
+      <li class="card compare-card">
+        <h3>Aerobic with drip lines</h3>
+        <p class="compare-sub">Three tanks, filter, buried drip lines</p>
+        <dl>
+          <dt>Best for</dt><dd>Clay soil where you would rather not have sprinklers, smaller or oddly shaped areas, and yards that get a lot of use</dd>
+          <dt>Treated water</dt><dd>Filtered, then released a few inches underground</dd>
+          <dt>Upkeep</dt><dd>A maintenance contract with inspections every four months, and a filter that is cleaned periodically; no chlorine</dd>
+          <dt>Electricity</dt><dd>Yes, for the air pump and the pump</dd>
+          <dt>Keep in mind</dt><dd>The water stays out of sight, but the drip area must not be dug into or driven over.</dd>
+        </dl>
+      </li>
+    </ul>
+    <div class="guide-note compare-note">
+      {% include icon.html name="check" %}
+      <span><strong>The short answer: your site decides.</strong> Soil type, lot size and layout, and county permitting rules determine which systems will work. We evaluate the property, explain the options that fit, and quote each one.</span>
+    </div>
+    <div class="hero-actions guide-actions">
+      <a class="btn btn-primary btn-lg" href="/contact?service=installation#quote">Request a site evaluation</a>
+      <a class="btn btn-secondary btn-lg" href="tel:{{ b.phone_href }}">{% include icon.html name="phone" %} {{ b.phone }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="protect-heading">
   <div class="container">
     <div class="section-head">
       <h2 id="protect-heading">How to keep your system working</h2>
@@ -212,7 +264,7 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
   </div>
 </section>
 
-<section class="section" aria-labelledby="signs-heading">
+<section class="section section-alt" aria-labelledby="signs-heading">
   <div class="container">
     <div class="section-head">
       <h2 id="signs-heading">Warning signs to watch for</h2>

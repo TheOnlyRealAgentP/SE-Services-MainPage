@@ -932,3 +932,16 @@ html:not(.js) .reviews-controls { display: none; }
 .signs h3 .icon { flex: none; color: var(--accent); }
 .signs p { color: var(--text); }
 .guide-actions { margin-top: var(--s-4); }
+
+/* "Which system is right for me?" comparison */
+.compare { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+@media (min-width: 960px) { .compare { grid-template-columns: repeat(3, 1fr); } }
+.compare-card { display: flex; flex-direction: column; border-top: 4px solid var(--accent); }
+.compare-card h3 { font-size: 1.375rem; margin-bottom: 2px; }
+.compare-sub { margin: 0 0 var(--s-2); color: var(--muted); font-size: var(--fs-sm); }
+.compare-card dl { margin: 0; display: grid; gap: 4px; }
+.compare-card dt { font-family: var(--font-head); font-weight: 700; color: var(--accent); font-size: .875rem; letter-spacing: .06em; text-transform: uppercase; margin-top: 10px; }
+.compare-card dt:first-child { margin-top: 0; }
+.compare-card dd { margin: 0; color: var(--text); }
+.compare-note { margin-top: var(--s-4); }
+.compare-note .icon { color: #2E7D4F; }
