@@ -520,7 +520,11 @@ html:not(.js) .sub-toggle { display: none; }
 .quote-form.is-sending button[type="submit"] { opacity: .7; cursor: progress; }
 
 /* ---------- CTA band ---------- */
-.cta-band { background: var(--ink); color: #D6E2EE; padding-block: var(--s-5); background-image: linear-gradient(var(--blueprint) 1px, transparent 1px), linear-gradient(90deg, var(--blueprint) 1px, transparent 1px); background-size: 80px 80px; }
+/* Royal Stewart tartan (assets/img/royal-stewart.svg) woven faintly under the navy */
+.cta-band {
+  color: #D6E2EE; padding-block: var(--s-5);
+  background: linear-gradient(rgba(14, 35, 56, .86), rgba(14, 35, 56, .86)), url("../img/royal-stewart.svg") 0 0 / 180px 180px repeat var(--ink);
+}
 .cta-band h2 { color: var(--white); }
 .cta-band p { margin: 0; max-width: 40rem; }
 .cta-inner { display: grid; gap: var(--s-3); align-items: center; }
@@ -529,7 +533,11 @@ html:not(.js) .sub-toggle { display: none; }
 @media (min-width: 960px) { .cta-inner { grid-template-columns: 1fr auto; gap: var(--s-5); } .cta-actions .btn { flex: 0 0 auto; } }
 
 /* ---------- Footer ---------- */
-.site-footer { background: #0A1A2B; color: #C4D2E0; padding-top: var(--s-5); font-size: 0.9375rem; border-top: 4px solid var(--accent); }
+.site-footer {
+  color: #C4D2E0; padding-top: var(--s-5); font-size: 0.9375rem;
+  background: linear-gradient(rgba(10, 26, 43, .92), rgba(10, 26, 43, .92)), url("../img/royal-stewart.svg") 0 0 / 220px 220px repeat #0A1A2B;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+}
 .site-footer a { color: #DCE6F0; }
 .site-footer a:hover { color: var(--white); }
 .site-footer strong { color: var(--white); }
@@ -847,3 +855,20 @@ html:not(.js) .reviews-controls { display: none; }
 .area-note p { color: var(--text); }
 .area-note-actions { display: flex; flex-wrap: wrap; gap: var(--s-1); margin: var(--s-2) 0 0; }
 @media (max-width: 479px) { .area-note-actions .btn { width: 100%; } }
+
+/* About page: "Our heritage" panel, a tartan badge holding the logo mark on the navy blueprint */
+.heritage-panel {
+  display: grid; place-items: center; aspect-ratio: 4 / 3; max-width: 100%; border-radius: var(--radius); overflow: hidden;
+  background-color: var(--ink);
+  background-image:
+    linear-gradient(var(--blueprint) 1px, transparent 1px), linear-gradient(90deg, var(--blueprint) 1px, transparent 1px),
+    linear-gradient(rgba(140, 203, 242, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(140, 203, 242, .05) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
+  box-shadow: 0 12px 40px rgba(14, 35, 56, .18);
+}
+.heritage-badge {
+  display: grid; place-items: center; width: 42%; aspect-ratio: 1; border-radius: 50%;
+  background: url("../img/royal-stewart.svg") center / 150px 150px repeat #C80000;
+  box-shadow: 0 0 0 7px #fff, 0 12px 34px rgba(0, 0, 0, .45), inset 0 0 50px rgba(20, 0, 0, .35);
+}
+.heritage-badge img { width: 72%; height: auto; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, .6)); }

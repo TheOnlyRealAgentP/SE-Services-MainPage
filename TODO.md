@@ -44,6 +44,11 @@ its marker disappears from every page.
 
 - [ ] **/about: founding story.** Who started the company, when, and how
       the septic side and the engineering side came together.
+- [ ] **/about: heritage section.** Add the family's own story (who started
+      the company, how the Stewart name has been carried forward) under
+      "A Stewart family business". Also confirm the Royal Stewart thread
+      count used in `assets/img/royal-stewart.svg` against the Scottish
+      Register of Tartans.
 - [ ] **/about: owner bio.** Two or three sentences: background, licenses,
       what they handle personally. (Reviews mention "Mr. Stewart" and "Joe";
       the site doesn't name anyone until you confirm.)

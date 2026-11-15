@@ -25,6 +25,22 @@ lede: A family-owned firm in Channelview providing septic and aerobic services f
   </div>
 </section>
 
+<section class="section section-alt" aria-labelledby="heritage-heading">
+  <div class="container two-col two-col-center">
+    <div class="heritage-panel" role="img" aria-label="The Stewart Engineering gear and compass on a Royal Stewart tartan badge">
+      <span class="heritage-badge"><img src="/assets/img/logo-mark-reversed.svg" alt="" width="298" height="298" loading="lazy" decoding="async"></span>
+    </div>
+    <div class="prose">
+      <p class="eyebrow">Our heritage</p>
+      <h2 id="heritage-heading" class="rule">A Stewart family business</h2>
+      <p>We are proud to carry the Stewart name and its Scottish heritage as part of the Royal Stewart lineage. The Royal Stewart tartan is part of our family's story, and it represents the standard we hold ourselves to on every project: careful work, honest dealing and pride in our family name.</p>
+      {%- if site.show_todos %}
+      <p>{% include todo.html t="the family's own story: who started the company, and how the Stewart name has been carried forward" %}</p>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
 {%- if site.show_todos -%}
   {%- assign lics = b.licenses -%}
 {%- else -%}
