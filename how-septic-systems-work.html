@@ -1,6 +1,6 @@
 ---
 title: How a Septic System Works
-description: How septic and three-tank aerobic systems work, what never to flush, and the warning signs of trouble. A homeowner guide for East Harris County.
+description: How septic and three-tank aerobic systems with spray or drip lines work, what not to flush, and warning signs. A homeowner guide for East Harris County.
 permalink: /how-septic-systems-work
 side: septic
 quote_service: maintenance
@@ -14,7 +14,7 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
     <div class="prose">
       <h2 id="what-heading" class="rule">What is a septic system?</h2>
       <p>If your home is not connected to city sewer, everything that goes down your drains, including toilets, showers, sinks and laundry, flows to a septic system buried in your yard. The system holds the wastewater, lets the solids settle and break down, and returns cleaned water to the ground.</p>
-      <p>Most homes in East Harris County use one of two types: a <a href="#conventional">conventional system</a>, which treats the water in the soil, or an <a href="#aerobic">aerobic system</a>, which treats it inside the tanks and sprays it on the lawn. Much of the area has dense clay soil that drains slowly, so aerobic systems are common here.</p>
+      <p>Most homes in East Harris County use one of two types: a <a href="#conventional">conventional system</a>, which treats the water in the soil, or an <a href="#aerobic">aerobic system</a>, which treats it inside the tanks and returns it to the lawn through sprinklers or drip lines. Much of the area has dense clay soil that drains slowly, so aerobic systems are common here.</p>
     </div>
     <figure class="guide-photo">
       {% include picture.html name="aerobic-system-lawn" sizes="(min-width: 768px) 46vw, 100vw" %}
@@ -90,14 +90,14 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
     <div class="section-head">
       <p class="eyebrow">Type 2 · What we install</p>
       <h2 id="aer-heading">Three-tank aerobic system</h2>
-      <p>An aerobic system treats the water inside the tanks using air and oxygen-loving bacteria, then disinfects it and sprays it on the lawn. It works well in heavy clay soil and on smaller lots. We install three-tank aerobic systems.</p>
+      <p>An aerobic system treats the water inside the tanks using air and oxygen-loving bacteria, then disinfects it and returns it to the lawn, either through sprinklers or through drip lines buried just below the surface. It works well in heavy clay soil and on smaller lots. We install three-tank aerobic systems with spray or drip distribution.</p>
       {%- if site.show_todos %}<p>{% include todo.html t="confirm the brand of aerobic system we install (mentioned as 'Tuff Tiger') before naming it here" %}</p>{% endif %}
     </div>
     <figure class="diagram">
       <div class="diagram-scroll">
       <svg viewBox="0 0 1000 400" role="img" aria-labelledby="aer-title aer-desc">
         <title id="aer-title">Three-tank aerobic septic system diagram</title>
-        <desc id="aer-desc">Wastewater flows from the house into a trash tank where solids settle. It moves into an aerobic treatment tank, where an air pump bubbles air through the water and a clarifier lets particles settle. Clear water passes through a chlorinator into a pump tank, and a pump sends it to sprinkler heads that spray it over the lawn.</desc>
+        <desc id="aer-desc">Wastewater flows from the house into a trash tank where solids settle. It moves into an aerobic treatment tank, where an air pump bubbles air through the water and a clarifier lets particles settle. Clear water passes through a chlorinator into a pump tank, and a pump sends it to sprinkler heads that spray it over the lawn, or to drip lines buried just below the surface.</desc>
         <rect class="dg-soil" x="0" y="170" width="1000" height="230"/>
         <rect class="dg-grass" x="0" y="160" width="1000" height="14" rx="3"/>
         <!-- house with control panel -->
@@ -141,6 +141,10 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
         <path class="dg-pipe dg-pipe-thin" d="M820 292 V182 H958 V166"/>
         <rect class="dg-head" x="952" y="150" width="12" height="16" rx="2"/>
         <path class="dg-spray" d="M958 148 Q930 96 880 104 M958 148 Q956 92 912 76 M958 148 Q980 104 990 120"/>
+        <path class="dg-drip" d="M906 182 V206 H990 M906 206 V230 H990"/>
+        <g class="dg-emit"><circle cx="926" cy="206" r="3.5"/><circle cx="950" cy="206" r="3.5"/><circle cx="974" cy="206" r="3.5"/><circle cx="926" cy="230" r="3.5"/><circle cx="950" cy="230" r="3.5"/><circle cx="974" cy="230" r="3.5"/></g>
+        <path class="dg-seep" d="M926 238 v10 M950 238 v14 M974 238 v10"/>
+        <text class="dg-small" x="948" y="276" text-anchor="middle">or drip lines</text>
         <!-- numbered markers -->
         <path class="dg-leader" d="M316 102 V152 M500 82 V116 M629 102 V152 M721 62 V140 M819 102 V152 M940 56 V70"/>
         <g class="dg-num" transform="translate(316 84)"><circle r="18"/><text y="7">1</text></g>
@@ -161,7 +165,7 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
       <li><h3>Clarifier</h3><p>In a calm section of the same tank, remaining particles settle back into the aeration chamber, leaving clear water at the top.</p></li>
       <li><h3>Chlorinator</h3><p>The clear water passes over chlorine tablets that disinfect it on its way to the last tank.</p></li>
       <li><h3>Pump tank</h3><p>The third tank holds the treated water. When it fills, a pump switches on.</p></li>
-      <li><h3>Spray heads</h3><p>The pump sends the treated water to sprinkler heads that spray it over the lawn, where it soaks in and evaporates.</p></li>
+      <li><h3>Sprinklers or drip lines</h3><p>The pump sends the treated water either to sprinkler heads that spray it over the lawn, or to drip lines buried a few inches down that release it slowly into the soil.</p></li>
     </ol>
     <p class="guide-note">{% include icon.html name="alert" %}<span>A control panel runs the pumps and turns on a light or buzzer if something stops working. If the alarm comes on, check the breaker first, then <a href="tel:{{ b.phone_href }}">call us</a>.</span></p>
   </div>
@@ -183,7 +187,7 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
           <li>Fix running toilets and dripping faucets right away</li>
           <li>Keep the chlorinator stocked with tablets made for wastewater systems, not pool tablets</li>
           <li>Leave the air pump running and its breaker on</li>
-          <li>Keep the tank lids reachable and the spray area clear</li>
+          <li>Keep the tank lids reachable and the spray or drip area clear</li>
           <li>Call when the alarm comes on, the sooner the better</li>
         </ul>
       </div>
@@ -195,7 +199,7 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
           <li>Pour paint, solvents, pesticides or harsh drain cleaners down any drain</li>
           <li>Use large amounts of bleach or antibacterial cleaners at once</li>
           <li>Flush leftover medications</li>
-          <li>Drive, park or build over the tanks, lines, drain field or spray area</li>
+          <li>Drive, park or build over the tanks, lines, drain field, or spray or drip area</li>
           <li>Plant trees or large shrubs near the tanks and lines, where roots can break in</li>
           <li>Send gutters, sump pumps or pool water into the system or onto the drain field</li>
         </ul>
@@ -214,8 +218,8 @@ lede: What is buried in your yard, how it cleans your wastewater, and the everyd
       <li class="card"><h3>{% include icon.html name="alert" %} The alarm comes on</h3><p>A light or buzzer on the control panel means a pump, the air pump or the water level needs attention.</p></li>
       <li class="card"><h3>{% include icon.html name="alert" %} Slow or gurgling drains</h3><p>Sinks, tubs and toilets that drain slowly or gurgle can mean a full tank or a blocked line.</p></li>
       <li class="card"><h3>{% include icon.html name="alert" %} Sewage odor</h3><p>A strong smell inside or in the yard often means the air pump has stopped or the tanks need pumping.</p></li>
-      <li class="card"><h3>{% include icon.html name="alert" %} Soggy ground</h3><p>Standing water or wet spots near the tanks, drain field or spray area point to a leak or an overloaded system.</p></li>
-      <li class="card"><h3>{% include icon.html name="alert" %} Weak sprinklers</h3><p>On an aerobic system, spray heads that barely spray can mean a broken line or a failing pump.</p></li>
+      <li class="card"><h3>{% include icon.html name="alert" %} Soggy ground</h3><p>Standing water or wet spots near the tanks, drain field or spray or drip area point to a leak or an overloaded system.</p></li>
+      <li class="card"><h3>{% include icon.html name="alert" %} Weak sprinklers</h3><p>On an aerobic system, spray heads that barely spray, or a drip area that stays soggy, can mean a broken line or a failing pump.</p></li>
       <li class="card"><h3>{% include icon.html name="alert" %} Backups</h3><p>Sewage coming up in a tub, shower or floor drain needs attention right away. Stop using water and call.</p></li>
     </ul>
     <div class="hero-actions guide-actions">
