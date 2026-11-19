@@ -10,7 +10,8 @@
         {{ b.address.street }}<br>
         {{ b.address.city }}, {{ b.address.region }} {{ b.address.postal_code }}<br>
         <a href="tel:{{ b.phone_href }}">{{ b.phone }}</a><br>
-        <a href="mailto:{{ b.email }}">{{ b.email }}</a>
+        <a href="mailto:{{ b.email }}">{{ b.email }}</a><br>
+        <a href="mailto:{{ b.email_engineering }}">{{ b.email_engineering }}</a>
       </address>
       <p class="footer-hours"><span class="footer-label">Office hours</span><br>
         {%- for h in b.hours %}

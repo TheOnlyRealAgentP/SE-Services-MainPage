@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Platting in Harris County, TX
-description: Platting in Harris County and Channelview. Plats that set boundaries, easements and building lines, taken through city, county or MUD approval.
+description: Commercial and residential property platting in Harris County. Plats setting boundaries, easements and building lines, for city, county or MUD approval.
 permalink: /platting
 side: engineering
 service_id: platting

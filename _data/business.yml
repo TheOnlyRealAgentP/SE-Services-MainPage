@@ -13,7 +13,8 @@ founded_note: 50+ years of engineering experience
 
 phone: (281) 862-9769
 phone_href: "+12818629769"
-email: info@aerobicservice.com
+email: info@aerobicservice.com            # septic & aerobic (main office email)
+email_engineering: info@se.services     # engineering inquiries (from se.services)
 
 address:
   street: 16531 Shady Lane
@@ -25,12 +26,12 @@ address:
 
 # Map pin coordinates for Google. Leave blank until confirmed
 # (right-click the office pin in Google Maps to copy them).
-geo:
-  latitude: ""
-  longitude: ""
+geo:                          # from the Google Business Profile pin
+  latitude: "29.8094675"
+  longitude: "-95.1064891"
 
 # Link that opens directions in Google Maps (no API key needed).
-maps_url: https://www.google.com/maps/search/?api=1&query=16531+Shady+Lane%2C+Channelview%2C+TX+77530
+maps_url: https://maps.google.com/?cid=6080362040132078051   # opens the Google Business Profile listing
 maps_embed: https://www.google.com/maps?q=16531+Shady+Lane,+Channelview,+TX+77530&output=embed
 
 # Opening hours. "days" uses schema.org day names; "label" is what people see.
@@ -84,8 +85,8 @@ form:
 
 social:
   facebook: https://www.facebook.com/StewartAerobic
-  google_business: ""          # your Google Business Profile URL
-  google_review_link: ""       # the "Ask for reviews" link from Google Business Profile
+  google_business: https://maps.google.com/?cid=6080362040132078051
+  google_review_link: https://search.google.com/local/writereview?placeid=ChIJaTCNK-GmQIYR44nXcw_JYVQ
 
 # Only fill these in once there is a real, linkable rating (e.g. Google).
 # Until then no stars are shown anywhere.

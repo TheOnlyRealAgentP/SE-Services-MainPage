@@ -30,14 +30,17 @@ its marker disappears from every page.
   - [ ] Texas Professional Engineer (PE) license #
   - [ ] TBPELS engineering firm registration # (format `F-12345`)
 - [ ] **Owner** name and title (`owner:`), shown on /about.
-- [ ] **Map pin coordinates** (`geo:`). Right-click the office pin in Google
-      Maps and copy the two numbers. Used in Google's structured data.
+- [x] **Map pin coordinates** (`geo:`): filled from the Google Business
+      Profile pin linked on se.services (29.8094675, -95.1064891).
 - [ ] **Contact form endpoint** (`form:`). Create a free form at
       [Formspree](https://formspree.io) or [Web3Forms](https://web3forms.com)
       that emails the office, then paste the endpoint (and the Web3Forms
       access key if you use Web3Forms). Until then the form shows an error
       and asks people to call.
-- [ ] **Google Business Profile URL** and **review link** (`social:`).
+- [x] **Google Business Profile URL** and **review link** (`social:`): found
+      via the map link on se.services and checked to open the "Stewart
+      Engineering Services" listing. The review link now shows under the
+      review carousel.
 - [ ] **Rating.** Only once there's a real, linkable rating (`rating:`).
 
 ## 2. Page content

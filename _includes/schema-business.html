@@ -11,6 +11,10 @@
   "url": {{ b.url | append: "/" | jsonify }},
   "telephone": {{ b.phone_href | jsonify }},
   "email": {{ b.email | jsonify }},
+  "contactPoint": [
+    { "@type": "ContactPoint", "contactType": "septic and aerobic service", "telephone": {{ b.phone_href | jsonify }}, "email": {{ b.email | jsonify }}, "areaServed": "US-TX", "availableLanguage": "English" },
+    { "@type": "ContactPoint", "contactType": "engineering", "telephone": {{ b.phone_href | jsonify }}, "email": {{ b.email_engineering | jsonify }}, "areaServed": "US-TX", "availableLanguage": "English" }
+  ],
   "image": {{ b.url | append: "/assets/img/og-image.jpg" | jsonify }},
   "logo": {{ b.url | append: "/assets/img/logo.png" | jsonify }},
   "description": {{ site.description | strip | jsonify }},

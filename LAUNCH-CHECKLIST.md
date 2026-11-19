@@ -47,7 +47,8 @@ website **exactly**, everywhere:
 
 ## Google Business Profile
 
-- [ ] Search Google Maps for "Stewart Engineering", "Stewart Aerobic",
+- [ ] The listing linked from se.services is "Stewart Engineering Services"
+      (category: civil engineering company). Also search Google Maps for "Stewart Engineering", "Stewart Aerobic",
       "AIMS" and "Aerobic Installation and Maintenance" near Channelview. Claim
       every listing that's yours.
 - [ ] If there are duplicates for the same address, keep one and ask Google
@@ -65,9 +66,9 @@ website **exactly**, everywhere:
       summaries from `_data/services.yml`.
 - [ ] **Photos:** logo, office or truck, crew at work, finished installs,
       and an engineering project. Add a few new ones every month.
-- [ ] Get the **review link** (Business Profile → **Ask for reviews**). Put it
-      in `_data/business.yml` as `google_review_link`, and the profile URL as
-      `google_business`.
+- [x] Review link and profile URL are in `_data/business.yml`
+      (`google_review_link`, `google_business`). Review link:
+      https://search.google.com/local/writereview?placeid=ChIJaTCNK-GmQIYR44nXcw_JYVQ
 
 ## Directory listings
 
